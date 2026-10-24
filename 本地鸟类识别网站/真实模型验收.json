@@ -1,0 +1,51 @@
+{
+  "sample": "baitoubei_009.jpg uploaded under unrelated filename",
+  "scope": "管线验收及历史结果重放，不是外来图片准确率评估",
+  "models": [
+    {
+      "model": "gen1",
+      "seconds_including_load": 5.63,
+      "checks": [
+        {
+          "variant": "ppyoloe",
+          "birds": 1,
+          "class": "白头鹎"
+        }
+      ]
+    },
+    {
+      "model": "gen2",
+      "seconds_including_load": 8.62,
+      "checks": [
+        {
+          "variant": "resnet18",
+          "birds": 1,
+          "class": "白头鹎",
+          "max_coordinate_delta": 0.0,
+          "max_class_score_delta": 0.00011676549911499023
+        },
+        {
+          "variant": "bilinear",
+          "birds": 1,
+          "class": "家麻雀",
+          "max_coordinate_delta": 0.0,
+          "max_class_score_delta": 0.0003803074359893799
+        }
+      ]
+    },
+    {
+      "model": "gen3",
+      "seconds_including_load": 47.93,
+      "checks": [
+        {
+          "variant": "bioclip2",
+          "birds": 1,
+          "class": "白头鹎",
+          "max_coordinate_delta": 0.0,
+          "max_class_score_delta": 0.0001716017723083496
+        }
+      ]
+    }
+  ],
+  "no_box_handling": true
+}

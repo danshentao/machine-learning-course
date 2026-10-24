@@ -1,0 +1,448 @@
+{
+  "date": "2026-10-24",
+  "github": "https://github.com/danshentao/machine-learning-course",
+  "dataset": {
+    "raw_images": 968,
+    "xml": 966,
+    "classes": 8,
+    "fixed_validation_images": 172,
+    "fixed_validation_instances": 204
+  },
+  "generation1": {
+    "mAP50": 0.86146,
+    "precision": 0.45641,
+    "recall": 0.87255,
+    "F1": 0.59933,
+    "metric_confidence_threshold": 0.25,
+    "training_epochs": 100,
+    "xml_disagreement_images": 39,
+    "xml_images": 966,
+    "disagreement_fraction": 0.040372670807453416,
+    "historical_display_threshold": 0.5
+  },
+  "generation2_initial": {
+    "resnet": {
+      "split": "val",
+      "images": 172,
+      "mAP50_macro_101point": 0.81077993631087,
+      "micro_precision_at_detector_threshold": 0.8809523809523809,
+      "micro_recall_at_detector_threshold": 0.7254901960784313,
+      "micro_F1": 0.7956989247311828,
+      "detector_threshold_strictly_greater_than": 0.5,
+      "NMS_IoU": 0.7,
+      "match_IoU": 0.5,
+      "AP_score": "detector_score * classifier_top_score; from PP-YOLOE score_threshold=0.001 outputs, top 100 detector-score candidates per image are retained (COCO maxDets=100) and ranked for 101-point AP",
+      "max_detections_per_image": 100,
+      "confusion_matrix_matching": "不看类别先按IoU>=0.5按重叠降序一对一配对；错类记真值行/预测列；未匹配记入背景行或列。",
+      "per_class": [
+        {
+          "id": 0,
+          "class_name": "树麻雀",
+          "AP50_101point": 0.500243669640863,
+          "precision_at_detector_threshold": 0.8260869565217391,
+          "recall_at_detector_threshold": 0.4318181818181818,
+          "F1": 0.5671641791044776,
+          "TP": 19,
+          "FP": 4,
+          "FN": 25,
+          "GT": 44
+        },
+        {
+          "id": 1,
+          "class_name": "家麻雀",
+          "AP50_101point": 0.7992421817324467,
+          "precision_at_detector_threshold": 0.875,
+          "recall_at_detector_threshold": 0.7777777777777778,
+          "F1": 0.823529411764706,
+          "TP": 21,
+          "FP": 3,
+          "FN": 6,
+          "GT": 27
+        },
+        {
+          "id": 2,
+          "class_name": "山麻雀",
+          "AP50_101point": 0.8448472831368017,
+          "precision_at_detector_threshold": 0.8,
+          "recall_at_detector_threshold": 0.8,
+          "F1": 0.8000000000000002,
+          "TP": 16,
+          "FP": 4,
+          "FN": 4,
+          "GT": 20
+        },
+        {
+          "id": 3,
+          "class_name": "白头鹎",
+          "AP50_101point": 0.902876750216247,
+          "precision_at_detector_threshold": 0.9,
+          "recall_at_detector_threshold": 0.8181818181818182,
+          "F1": 0.8571428571428572,
+          "TP": 18,
+          "FP": 2,
+          "FN": 4,
+          "GT": 22
+        },
+        {
+          "id": 4,
+          "class_name": "红耳鹎",
+          "AP50_101point": 0.9017288175704019,
+          "precision_at_detector_threshold": 0.9523809523809523,
+          "recall_at_detector_threshold": 0.8,
+          "F1": 0.8695652173913043,
+          "TP": 20,
+          "FP": 1,
+          "FN": 5,
+          "GT": 25
+        },
+        {
+          "id": 5,
+          "class_name": "黑喉红臀鹎",
+          "AP50_101point": 0.876787678767877,
+          "precision_at_detector_threshold": 0.8571428571428571,
+          "recall_at_detector_threshold": 0.9,
+          "F1": 0.8780487804878048,
+          "TP": 18,
+          "FP": 3,
+          "FN": 2,
+          "GT": 20
+        },
+        {
+          "id": 6,
+          "class_name": "大山雀",
+          "AP50_101point": 0.7847233875929965,
+          "precision_at_detector_threshold": 0.8947368421052632,
+          "recall_at_detector_threshold": 0.7083333333333334,
+          "F1": 0.7906976744186046,
+          "TP": 17,
+          "FP": 2,
+          "FN": 7,
+          "GT": 24
+        },
+        {
+          "id": 7,
+          "class_name": "煤山雀",
+          "AP50_101point": 0.8757897218293258,
+          "precision_at_detector_threshold": 0.95,
+          "recall_at_detector_threshold": 0.8636363636363636,
+          "F1": 0.9047619047619048,
+          "TP": 19,
+          "FP": 1,
+          "FN": 3,
+          "GT": 22
+        }
+      ],
+      "matching": "P/R/F1要求类别正确且IoU>=0.5的一对一贪心匹配；重复预测计FP。正式方案以预测框端到端评估。"
+    },
+    "bilinear": {
+      "split": "val",
+      "images": 172,
+      "mAP50_macro_101point": 0.7902664851113808,
+      "micro_precision_at_detector_threshold": 0.8690476190476191,
+      "micro_recall_at_detector_threshold": 0.7156862745098039,
+      "micro_F1": 0.7849462365591398,
+      "detector_threshold_strictly_greater_than": 0.5,
+      "NMS_IoU": 0.7,
+      "match_IoU": 0.5,
+      "AP_score": "detector_score * classifier_top_score; from PP-YOLOE score_threshold=0.001 outputs, top 100 detector-score candidates per image are retained (COCO maxDets=100) and ranked for 101-point AP",
+      "max_detections_per_image": 100,
+      "confusion_matrix_matching": "不看类别先按IoU>=0.5按重叠降序一对一配对；错类记真值行/预测列；未匹配记入背景行或列。",
+      "per_class": [
+        {
+          "id": 0,
+          "class_name": "树麻雀",
+          "AP50_101point": 0.5624033053453322,
+          "precision_at_detector_threshold": 0.7857142857142857,
+          "recall_at_detector_threshold": 0.5,
+          "F1": 0.6111111111111112,
+          "TP": 22,
+          "FP": 6,
+          "FN": 22,
+          "GT": 44
+        },
+        {
+          "id": 1,
+          "class_name": "家麻雀",
+          "AP50_101point": 0.6725384527483718,
+          "precision_at_detector_threshold": 1.0,
+          "recall_at_detector_threshold": 0.6296296296296297,
+          "F1": 0.7727272727272727,
+          "TP": 17,
+          "FP": 0,
+          "FN": 10,
+          "GT": 27
+        },
+        {
+          "id": 2,
+          "class_name": "山麻雀",
+          "AP50_101point": 0.8834958683838309,
+          "precision_at_detector_threshold": 0.8095238095238095,
+          "recall_at_detector_threshold": 0.85,
+          "F1": 0.8292682926829269,
+          "TP": 17,
+          "FP": 4,
+          "FN": 3,
+          "GT": 20
+        },
+        {
+          "id": 3,
+          "class_name": "白头鹎",
+          "AP50_101point": 0.8937772038073373,
+          "precision_at_detector_threshold": 0.9,
+          "recall_at_detector_threshold": 0.8181818181818182,
+          "F1": 0.8571428571428572,
+          "TP": 18,
+          "FP": 2,
+          "FN": 4,
+          "GT": 22
+        },
+        {
+          "id": 4,
+          "class_name": "红耳鹎",
+          "AP50_101point": 0.9009444254056951,
+          "precision_at_detector_threshold": 0.9523809523809523,
+          "recall_at_detector_threshold": 0.8,
+          "F1": 0.8695652173913043,
+          "TP": 20,
+          "FP": 1,
+          "FN": 5,
+          "GT": 25
+        },
+        {
+          "id": 5,
+          "class_name": "黑喉红臀鹎",
+          "AP50_101point": 0.9087527627535893,
+          "precision_at_detector_threshold": 0.9473684210526315,
+          "recall_at_detector_threshold": 0.9,
+          "F1": 0.9230769230769231,
+          "TP": 18,
+          "FP": 1,
+          "FN": 2,
+          "GT": 20
+        },
+        {
+          "id": 6,
+          "class_name": "大山雀",
+          "AP50_101point": 0.7683893434876576,
+          "precision_at_detector_threshold": 0.7307692307692307,
+          "recall_at_detector_threshold": 0.7916666666666666,
+          "F1": 0.76,
+          "TP": 19,
+          "FP": 7,
+          "FN": 5,
+          "GT": 24
+        },
+        {
+          "id": 7,
+          "class_name": "煤山雀",
+          "AP50_101point": 0.7318305189592318,
+          "precision_at_detector_threshold": 0.9375,
+          "recall_at_detector_threshold": 0.6818181818181818,
+          "F1": 0.7894736842105263,
+          "TP": 15,
+          "FP": 1,
+          "FN": 7,
+          "GT": 22
+        }
+      ],
+      "matching": "P/R/F1要求类别正确且IoU>=0.5的一对一贪心匹配；重复预测计FP。正式方案以预测框端到端评估。"
+    }
+  },
+  "generation2_frozen_best": {
+    "images": 172,
+    "GT": 204,
+    "displayed_boxes": 177,
+    "TP": 159,
+    "FP": 18,
+    "FN": 45,
+    "precision": 0.8983050847457628,
+    "recall": 0.7794117647058824,
+    "F1": 0.8346456692913385,
+    "class_disagreement_images": 13,
+    "no_display_images": 5,
+    "unmatched_annotation_boxes": 8,
+    "spatially_matched_wrong_class": 10
+  },
+  "generation3": {
+    "gen2_bilinear_best": {
+      "images": 172,
+      "GT": 204,
+      "displayed_boxes": 177,
+      "TP": 159,
+      "FP": 18,
+      "FN": 45,
+      "precision": 0.8983050847457628,
+      "recall": 0.7794117647058824,
+      "F1": 0.8346456692913385,
+      "class_disagreement_images": 13,
+      "no_display_images": 5,
+      "unmatched_annotation_boxes": 8,
+      "spatially_matched_wrong_class": 10
+    },
+    "bioclip2": {
+      "images": 172,
+      "GT": 204,
+      "displayed_boxes": 177,
+      "TP": 167,
+      "FP": 10,
+      "FN": 37,
+      "precision": 0.943502824858757,
+      "recall": 0.8186274509803921,
+      "F1": 0.8766404199475065,
+      "class_disagreement_images": 2,
+      "no_display_images": 5
+    },
+    "fet_fgvc": {
+      "images": 172,
+      "GT": 204,
+      "displayed_boxes": 177,
+      "TP": 163,
+      "FP": 14,
+      "FN": 41,
+      "precision": 0.9209039548022598,
+      "recall": 0.7990196078431373,
+      "F1": 0.8556430446194226,
+      "class_disagreement_images": 6,
+      "no_display_images": 5
+    }
+  },
+  "resolution960": {
+    "images": 172,
+    "GT": 204,
+    "displayed_boxes": 194,
+    "TP": 149,
+    "FP": 45,
+    "FN": 55,
+    "precision": 0.7680412371134021,
+    "recall": 0.7303921568627451,
+    "F1": 0.7487437185929648,
+    "class_disagreement_images": 9,
+    "no_display_images": 22,
+    "spatially_matched_wrong_class": 0,
+    "unmatched_displayed_boxes": 45
+  },
+  "generation4_map": {
+    "mAP50": 0.9819395055269073,
+    "mAP50_95": 0.7436071476128002,
+    "AP75": 0.8502811108438343,
+    "AR100": 0.7932826178451179,
+    "predictions": 19114,
+    "maxDets": [
+      1,
+      10,
+      100
+    ],
+    "per_class": [
+      {
+        "class_name": "树麻雀",
+        "GT": 44,
+        "AP50": 0.9695660206414727,
+        "AP50_95": 0.6040406748551304
+      },
+      {
+        "class_name": "家麻雀",
+        "GT": 27,
+        "AP50": 0.9849599245638853,
+        "AP50_95": 0.7147754675861251
+      },
+      {
+        "class_name": "山麻雀",
+        "GT": 20,
+        "AP50": 0.9405940594059405,
+        "AP50_95": 0.6854444279014368
+      },
+      {
+        "class_name": "白头鹎",
+        "GT": 22,
+        "AP50": 1.0,
+        "AP50_95": 0.8095540394375572
+      },
+      {
+        "class_name": "红耳鹎",
+        "GT": 25,
+        "AP50": 0.9603960396039604,
+        "AP50_95": 0.7257447387047803
+      },
+      {
+        "class_name": "黑喉红臀鹎",
+        "GT": 20,
+        "AP50": 1.0,
+        "AP50_95": 0.8760629004076879
+      },
+      {
+        "class_name": "大山雀",
+        "GT": 24,
+        "AP50": 1.0,
+        "AP50_95": 0.7353777520609205
+      },
+      {
+        "class_name": "煤山雀",
+        "GT": 22,
+        "AP50": 1.0,
+        "AP50_95": 0.797857179948764
+      }
+    ]
+  },
+  "generation4_fixed_metrics": {
+    "ppyoloe": {
+      "TP": 167,
+      "FP": 10,
+      "FN": 37,
+      "displayed_boxes": 177,
+      "unmatched_predictions": 8,
+      "unmatched_truths": 35,
+      "spatial_wrong_class": 2,
+      "images": 172,
+      "GT": 204,
+      "Precision": 0.943502824858757,
+      "Recall": 0.8186274509803921,
+      "F1": 0.8766404199475065,
+      "images_with_no_boxes": 5,
+      "class_disagreement_images": 2,
+      "matching_rule": "每个类别内按检测分数降序，以IoU>=0.5做一对一匹配。错误类别使预测类计FP、真值类计FN；重复预测为FP。混淆矩阵另用忽略类别的分数优先IoU匹配。"
+    },
+    "rfdetr": {
+      "TP": 191,
+      "FP": 5,
+      "FN": 13,
+      "displayed_boxes": 196,
+      "unmatched_predictions": 4,
+      "unmatched_truths": 12,
+      "spatial_wrong_class": 1,
+      "images": 172,
+      "GT": 204,
+      "Precision": 0.9744897959183674,
+      "Recall": 0.9362745098039216,
+      "F1": 0.9550000000000001,
+      "images_with_no_boxes": 0,
+      "class_disagreement_images": 1,
+      "matching_rule": "每个类别内按检测分数降序，以IoU>=0.5做一对一匹配。错误类别使预测类计FP、真值类计FN；重复预测为FP。混淆矩阵另用忽略类别的分数优先IoU匹配。"
+    }
+  },
+  "map_rules": {
+    "images": 172,
+    "truth_instances": 204,
+    "species_count": 8,
+    "candidate_count": 19114,
+    "detector_score_floor": 0.001,
+    "display_cutoff_0_30_used": false,
+    "dedup": "Original score-priority non-transitive IoU>=0.5, before classification",
+    "crop_expansion": 0.15,
+    "prediction_label": "one top-1 species per kept box",
+    "AP_ranking_score": "detector_score * classifier_top_score; ranking only, not a calibrated probability",
+    "COCO_IoUs": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "COCO_recall_samples": 101,
+    "max_detections_per_class_per_image": 100
+  }
+}

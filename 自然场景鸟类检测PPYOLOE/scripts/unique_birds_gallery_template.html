@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>鸟类预测去重对照</title>
+<style>
+body{font-family:"Microsoft YaHei",sans-serif;background:#f5f7fa;color:#20354a;margin:0}main{max-width:1450px;margin:auto;padding:24px}h1{font-size:25px}p{line-height:1.7}header{background:white;padding:18px 22px;border-bottom:1px solid #dbe2eb}button,input,select{padding:8px 12px;border:1px solid #bdcbd9;border-radius:4px;background:white;color:#20354a}button{cursor:pointer}button:disabled{opacity:.45}.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;position:sticky;top:0;background:#f5f7fa;padding:12px 0;z-index:2}.panels{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:white;padding:12px;border:1px solid #dbe2eb}.panel h2{font-size:18px;margin:4px 0 12px}svg{display:block;width:100%;height:auto;max-height:650px;background:#eef2f6}.info{margin:12px 0}table{border-collapse:collapse;width:100%;background:white;font-size:14px}td,th{padding:9px 12px;border-bottom:1px solid #e0e6ee;text-align:left}th{background:#24476a;color:white}td.number{text-align:right}details{background:white;border:1px solid #dbe2eb;margin:12px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.scroll{overflow-x:auto}.muted{color:#5a6d80}.empty{padding:22px}.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.score-grid span{padding:6px 8px;background:#f2f5f9}.notice{background:#fff3d6;padding:12px 16px;margin:16px 0;line-height:1.7}@media(max-width:800px){.panels{grid-template-columns:1fr}.score-grid{grid-template-columns:repeat(2,1fr)}main{padding:12px}}
+</style></head><body><header><h1>鸟类预测去重对照</h1><p id="overview"></p><p class="muted">同一重叠组只画最高置信度候选框。其他类别与框只显示在下方数据中。人工标注可能漏鸟，标注与预测分歧需要逐图复核。</p></header>
+<main><div class="controls"><input id="search" placeholder="输入图片名筛选" aria-label="图片名"><select id="split"><option value="">全部划分</option><option value="train">训练集</option><option value="val">验证集</option><option value="未参与训练或验证">其他图片</option></select><select id="mode"><option value="">全部图片</option><option value="changed">去重前存在多框</option><option value="different">去重后与标注有差异</option></select><button id="prev">上一张</button><select id="imageSelect" aria-label="图片选择"></select><button id="next">下一张</button><span id="position"></span><label><input id="showGT" type="checkbox">左侧显示人工标注</label></div>
+<h2 id="filename"></h2><p class="info" id="info"></p><div class="panels"><section class="panel"><h2>原图（可选择查看人工标注）</h2><div id="original"></div></section><section class="panel"><h2>最终显示：每个重叠组一个最高分框</h2><div id="prediction"></div></section></div>
+<div class="notice" id="thresholdNotice">框的显示阈值为严格大于50%，重叠分组阈值为IoU≥0.5。分组只依据预测框，不使用人工标注决定保留类别。框保留后类别仍可能预测错误；邻近或遮挡鸟也需检查是否被合并。</div>
+<h2>最终显示框及其候选得分</h2><div id="groups"></div><details><summary id="lowTitle">低于显示阈值的候选</summary><div id="lowGroups"></div></details>
+<details><summary>处理规则与核查记录</summary><p>按模型置信度从高到低处理，不区分类别。候选与已保留最高分框重叠IoU达到0.5时，作为隐藏候选归入该组；否则新建组。不会将整张图片只保留一个框，也不进行链式重叠合并。右侧只绘制代表框，其他候选仅以数据展示。</p><p id="validation"></p><p>原始候选、隐藏候选和分组结果已保存到项目 runs/unique_bird_display_gt50/predictions.json。原权重、人工标签与数据划分未改变。训练图仅供检查显示效果。</p></details>
+</main><script id="data" type="application/json">__DATA_JSON__</script><script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('data').textContent),classes=DATA.classes,all=DATA.images;
+const $=id=>document.getElementById(id);const threshold=DATA.summary.display_score_threshold,thresholdLabel=(threshold*100).toFixed(0)+'%';let filtered=[...all],index=0;
+const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=v=>(v*100).toFixed(2)+'%';const splitText=s=>({train:'训练集',val:'验证集'}[s]||s);
+function svg(im,dets,color){
+ let b=`<svg viewBox="0 0 ${im.width} ${im.height}" role="img" aria-label="${esc(im.name)}"><image href="${im.thumbnail}" width="${im.width}" height="${im.height}" preserveAspectRatio="none"/>`;
+ const font=Math.max(16,im.width/48),stroke=Math.max(2,im.width/280);
+ for(const d of dets){let [x1,y1,x2,y2]=d.b;const x=Math.max(0,x1),y=Math.max(0,y1),w=Math.max(0,Math.min(im.width,x2)-x),h=Math.max(0,Math.min(im.height,y2)-y);const tx=Math.max(0,Math.min(im.width-240,x1)),ty=Math.max(font,Math.min(im.height-font/2,y1-font/4));
+  b+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="none" stroke="${color}" stroke-width="${stroke}"/><text x="${tx}" y="${ty}" fill="white" stroke="#182331" stroke-width="${Math.max(1,font/9)}" paint-order="stroke" font-size="${font}" font-family="Microsoft YaHei,sans-serif">${esc(classes[d.c])}${color==='#E55353'?' '+pct(d.s):''}</text>`;
+ }return b+'</svg>';
+}
+function candidateTable(candidates){if(!candidates.length)return '<p class="muted">没有其他候选框。</p>';return '<div class="scroll"><table><thead><tr><th>候选类别</th><th>置信度</th><th>原图框坐标 xyxy</th></tr></thead><tbody>'+candidates.map(d=>`<tr><td>${esc(classes[d.c])}</td><td class="number">${pct(d.s)}</td><td>${d.b.map(x=>x.toFixed(1)).join(', ')}</td></tr>`).join('')+'</tbody></table></div>';}
+function groupView(g,i,shown){const d=g.winner;let h=`<details${shown?' open':''}><summary>${shown?'显示框':'未显示组'} ${i+1}：${esc(classes[d.c])} ${pct(d.s)}，${g.hidden_total}个隐藏候选</summary>`;
+ if(d.cs)h+='<p class="muted">下面八类得分来自这个代表框的同一候选位置，未归一化为总和100%。</p><div class="score-grid">'+d.cs.map((v,c)=>`<span>${esc(classes[c])} ${pct(v)}</span>`).join('')+'</div>';
+ h+='<p>代表框坐标：'+d.b.map(v=>v.toFixed(1)).join(', ')+'</p>';
+ h+='<details><summary>其他候选数据（不画框）</summary><p class="muted">列出所有超过'+thresholdLabel+'的隐藏候选及最多10个低分候选；完整候选保存在项目JSON。页面数值为展示精度，JSON保留原始精度。</p>'+candidateTable(g.hidden)+'</details></details>';return h;}
+function render(){if(!filtered.length){$('filename').textContent='没有匹配图片';$('original').innerHTML=$('prediction').innerHTML=$('groups').innerHTML=$('lowGroups').innerHTML='';$('info').textContent='';$('position').textContent='0 / 0';$('prev').disabled=$('next').disabled=true;return;}
+ const im=filtered[index],visible=im.groups.filter(g=>g.winner.s>threshold),low=im.groups.filter(g=>g.winner.s<=threshold);
+ $('imageSelect').value=String(index);$('filename').textContent=im.name+'（'+splitText(im.split)+'）';$('position').textContent=(index+1)+' / '+filtered.length;
+ $('info').textContent=`人工标注 ${im.gt.length} 个框；去重前 ${im.before} 个显示候选；现在显示 ${im.after} 个框，隐藏 ${im.before-im.after} 个超过${thresholdLabel}的重叠候选。`;
+ $('original').innerHTML=svg(im,$('showGT').checked?im.gt:[],'#23C174');$('prediction').innerHTML=svg(im,visible.map(g=>g.winner),'#E55353');
+ $('groups').innerHTML=visible.length?visible.map((g,i)=>groupView(g,i,true)).join(''):`<p class="empty">没有置信度严格超过${thresholdLabel}的显示框。</p>`;
+ $('lowTitle').textContent=`不超过${thresholdLabel}而未显示的 ${im.low_group_total} 个候选组（页面仅列最高分的前10组，完整结果在项目JSON）`;$('lowGroups').innerHTML=low.map((g,i)=>groupView(g,i,false)).join('');
+ $('prev').disabled=index===0;$('next').disabled=index===filtered.length-1;
+}
+function filter(){const q=$('search').value.trim().toLowerCase(),s=$('split').value,m=$('mode').value;filtered=all.filter(im=>im.name.toLowerCase().includes(q)&&(!s||im.split===s)&&(!m||(m==='changed'?im.before>im.after:im.different)));index=0;
+ $('imageSelect').innerHTML=filtered.map((im,i)=>`<option value="${i}">${esc(im.name)}</option>`).join('');render();}
+for(const id of ['search','split','mode'])$(id).addEventListener(id==='search'?'input':'change',filter);
+$('prev').onclick=()=>{if(index>0){index--;render();}};$('next').onclick=()=>{if(index<filtered.length-1){index++;render();}};
+$('imageSelect').onchange=()=>{index=Number($('imageSelect').value);render();};$('showGT').onchange=render;
+$('overview').textContent=`966张原图逐张检查。原显示候选 ${DATA.summary.visible_boxes_before} 个，跨类别去重后 ${DATA.summary.visible_boxes_after} 个；${DATA.summary.images_with_removed_duplicate_boxes} 张图片减少了重叠框。已排除两张无效图。`;
+const v=DATA.summary.validation_counts_after;$('validation').textContent=`固定验证集172张：按现有标注及置信度严格大于${thresholdLabel}核对，去重后同类正确匹配 ${v.TP} 个、多余框 ${v.FP} 个、未同类正确匹配标注 ${v.FN} 个。由于可能漏标，这些只是与现有标签的一致性统计。同阈值去重前分别为${DATA.summary.validation_counts_before.TP}、${DATA.summary.validation_counts_before.FP}、${DATA.summary.validation_counts_before.FN}；显示更简洁不代表分类准确率提高。`;
+$('thresholdNotice').textContent=`只显示置信度严格大于${thresholdLabel}的框，重叠分组阈值IoU≥0.5。分组不使用人工标注决定保留类别；邻近或遮挡鸟仍需检查是否被合并。`;
+filter();
+</script></body></html>

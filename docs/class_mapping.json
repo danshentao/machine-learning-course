@@ -1,0 +1,56 @@
+{
+  "description": "课程固定类别编号；类别名称标准化不代表实例标签均已人工确认。",
+  "classes": [
+    {
+      "id": 0,
+      "folder": "shumaque",
+      "name": "树麻雀"
+    },
+    {
+      "id": 1,
+      "folder": "jiamaque",
+      "name": "家麻雀"
+    },
+    {
+      "id": 2,
+      "folder": "shanmaque",
+      "name": "山麻雀"
+    },
+    {
+      "id": 3,
+      "folder": "baitoubei",
+      "name": "白头鹎"
+    },
+    {
+      "id": 4,
+      "folder": "hongerbei",
+      "name": "红耳鹎"
+    },
+    {
+      "id": 5,
+      "folder": "heihouhongtunbei",
+      "name": "黑喉红臀鹎"
+    },
+    {
+      "id": 6,
+      "folder": "dashanque",
+      "name": "大山雀"
+    },
+    {
+      "id": 7,
+      "folder": "meishanque",
+      "name": "煤山雀"
+    }
+  ],
+  "xml_label_to_standard": {
+    "树麻雀": "树麻雀",
+    "家麻雀": "家麻雀",
+    "山麻雀": "山麻雀",
+    "白头鹎": "白头鹎",
+    "红耳鹎": "红耳鹎",
+    "黑喉红臀鹎": "黑喉红臀鹎",
+    "大山雀": "大山雀",
+    "煤山雀": "煤山雀",
+    "眉山雀": "煤山雀"
+  }
+}

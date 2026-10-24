@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh"><meta charset="utf-8"><title>训练集困难样本人工复核</title>
+<style>
+body{font:15px system-ui;background:#eef2f5;margin:20px;color:#182334}
+header,article{background:white;padding:14px;margin:12px 0;border-radius:10px}
+input,select,button{font:inherit;padding:8px;margin:5px}
+.grid{display:grid;grid-template-columns:minmax(350px,55%) 1fr;gap:16px}
+canvas{width:100%;height:auto}.issues{color:#9b1c1c}.small{color:#475569}
+</style>
+<header>
+  <h1>训练集困难样本人工复核</h1>
+  <p>仅含训练原图；不使用验证图、brightness副本或教师测试图。绿框为原XML bird框并标出该实例的八类标注，蓝框为检测分数严格大于0.30的去重显示框。结果只是复核候选：未匹配框可能是漏标鸟、重复框或定位偏差，不能自动作为背景负样本。逐只核对物种和框后再决定是否允许有限重采样。</p>
+  <input id="q" placeholder="搜索文件名">
+  <select id="f">
+    <option value="all">全部问题图</option>
+    <option value="ground_truth_missed">有GT漏检</option>
+    <option value="score_below_display_threshold">分数低于显示阈值</option>
+    <option value="localization_or_box_extent">定位/框口径候选</option>
+    <option value="suspected_background_or_omitted_bird">疑似背景或漏标候选</option>
+    <option value="duplicate_or_unmatched_box">重复/未匹配框候选</option>
+  </select>
+  <button id="export">导出人工复核JSON</button><span id="n"></span>
+</header>
+<main id="cards"></main>
+<script>
+const D=__DATA__;let choice=JSON.parse(localStorage.getItem('hard_review_choice')||'{}');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function draw(c,r){let im=new Image();im.onload=()=>{c.width=im.width;c.height=im.height;let x=c.getContext('2d');x.drawImage(im,0,0);let sx=im.width/r.width,sy=im.height/r.height;x.font='bold 13px system-ui';function box(p,col,label){let z=p.bbox_xyxy;x.strokeStyle=col;x.lineWidth=2;x.strokeRect(z[0]*sx,z[1]*sy,(z[2]-z[0])*sx,(z[3]-z[1])*sy);let xx=z[0]*sx,yy=Math.max(17,z[1]*sy),tw=x.measureText(label).width;x.fillStyle=col;x.fillRect(xx,yy-17,tw+8,18);x.fillStyle='white';x.fillText(label,xx+4,yy-4)}r.truth.forEach((p,i)=>box(p,'#15803d','GT#'+(i+1)+' '+(p.class_name||'类别待映射')));r.displayed.forEach((p,i)=>box(p,'#1d4ed8','D#'+(i+1)+' '+(p.detector_score*100).toFixed(1)+'%'))};im.src=r.image}
+function render(){let q=document.querySelector('#q').value.toLowerCase(),f=document.querySelector('#f').value;let rs=D.rows.filter(r=>r.filename.toLowerCase().includes(q)&&(f==='all'||r.issues.some(x=>x.type===f)));document.querySelector('#n').textContent=rs.length+' 张';let main=document.querySelector('#cards');main.innerHTML='';for(let r of rs){let a=document.createElement('article'),key=r.filename,v=choice[key]||{};a.innerHTML=`<h2>${esc(key)} | ${r.truth.length}个人工框 / ${r.displayed.length}个显示框</h2><div class="grid"><canvas></canvas><div><p class="issues">${r.issues.map(x=>esc(x.type+' '+JSON.stringify(x))).join('<br>')}</p><p class="small">真值框和标准物种名沿用当前人工标注版本；模型分歧不代表标签错误。</p><label>人工结论 <select class="decision"><option value="pending">待复核</option><option value="confirmed_hard_positive">已有标注有效，可作为困难正样本</option><option value="label_or_box_issue">标签或框仍有疑点，隔离</option><option value="suspected_omission_or_background">疑似漏标/背景，继续隔离</option><option value="other">其他，需备注</option></select></label><div><label>备注 <input class="note" style="width:95%"></label></div><label><input class="allow" type="checkbox">确认可用于D组有限重采样</label><p class="small">只有“已有标注有效”且勾选才进入D组候选；其余均隔离。导出的复核JSON需要交回后才能用于后续重采样。</p></div></div>`;draw(a.querySelector('canvas'),r);let s=a.querySelector('.decision');s.value=v.decision||'pending';let n=a.querySelector('.note');n.value=v.note||'';let cb=a.querySelector('.allow');cb.checked=!!v.allow;function save(){choice[key]={decision:s.value,note:n.value,allow:cb.checked&&s.value==='confirmed_hard_positive'};localStorage.setItem('hard_review_choice',JSON.stringify(choice))}s.onchange=save;n.onchange=save;cb.onchange=save;main.appendChild(a)}}
+document.querySelector('#q').oninput=render;document.querySelector('#f').onchange=render;
+document.querySelector('#export').onclick=()=>{let blob=new Blob([JSON.stringify({source:'manual review page; predictions are candidates only',decisions:choice},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='hard_sample_manual_decisions.json';a.click();URL.revokeObjectURL(a.href)};render();
+</script></html>

@@ -1,0 +1,18 @@
+_BASE_: ['ppyoloe_plus_bird_640.yml']
+epoch: 1
+snapshot_epoch: 1
+log_iter: 1
+weights: E:/机器学习课设/第二代鸟类检测与细粒度分类/runs/smoke_detector/model_final
+save_dir: E:/机器学习课设/第二代鸟类检测与细粒度分类/runs/smoke_detector
+TrainDataset:
+  anno_path: E:/机器学习课设/第二代鸟类检测与细粒度分类/data/annotations/instances_train_bird_smoke.json
+EvalDataset:
+  anno_path: E:/机器学习课设/第二代鸟类检测与细粒度分类/data/annotations/instances_val_bird_smoke.json
+LearningRate:
+  base_lr: 0.00005
+  schedulers:
+    - name: CosineDecay
+      max_epochs: 1
+    - name: LinearWarmup
+      start_factor: 0.1
+      epochs: 1

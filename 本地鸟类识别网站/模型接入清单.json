@@ -1,0 +1,22 @@
+{
+  "gen1": {
+    "name": "第一代 · PP-YOLOE-s",
+    "ready": true,
+    "missing": []
+  },
+  "gen2": {
+    "name": "第二代 · PP-YOLOE+ + CNN",
+    "ready": true,
+    "missing": []
+  },
+  "gen3": {
+    "name": "第三代 · PP-YOLOE+ + BioCLIP 2",
+    "ready": true,
+    "missing": []
+  },
+  "gen4": {
+    "name": "第四代 · RF-DETR + BioCLIP 2",
+    "ready": true,
+    "missing": []
+  }
+}

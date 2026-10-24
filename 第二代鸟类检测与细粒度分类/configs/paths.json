@@ -1,0 +1,11 @@
+{
+  "workspace": "E:/机器学习课设",
+  "project": "E:/机器学习课设/第二代鸟类检测与细粒度分类",
+  "first_generation": "E:/机器学习课设/自然场景鸟类检测PPYOLOE",
+  "source_images": "E:/机器学习课设/考核任务数据/考核任务数据/自然场景鸟类识别数据/数据集",
+  "original_annotations_zip": "E:/机器学习课设/2804306_1790845704.zip",
+  "first_generation_split_manifest": "E:/机器学习课设/自然场景鸟类检测PPYOLOE/reports/split_manifest.csv",
+  "first_generation_brightness_manifest": "E:/机器学习课设/自然场景鸟类检测PPYOLOE/reports/brightness_training_manifest.csv",
+  "first_generation_prepared_data": "E:/机器学习课设/自然场景鸟类检测PPYOLOE/data/prepared",
+  "first_generation_review_archive": "E:/机器学习课设/第一代结果归档"
+}

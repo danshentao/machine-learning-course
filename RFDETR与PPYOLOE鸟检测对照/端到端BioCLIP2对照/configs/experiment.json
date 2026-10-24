@@ -1,0 +1,33 @@
+{
+  "output_root": "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\端到端BioCLIP2对照",
+  "detector_project": "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照",
+  "gen3_project": "E:\\机器学习课设\\第三代鸟类识别现代模型对照",
+  "class_mapping": "E:\\机器学习课设\\第二代鸟类检测与细粒度分类\\configs\\class_mapping.json",
+  "external_review": "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\reports\\新增框人工复核_用户确认_20261012.json",
+  "threshold_strictly_greater": 0.3,
+  "dedup_iou": 0.5,
+  "crop_expansion": 0.15,
+  "match_iou": 0.5,
+  "classifier": {
+    "encoder": "BioCLIP 2 ViT-L-14 visual encoder",
+    "weights": "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\weights\\bioclip2\\open_clip_model.safetensors",
+    "head": "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\runs\\bioclip2\\best_head.pt",
+    "config": "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\weights\\bioclip2\\open_clip_config.json"
+  },
+  "sources": {
+    "fixed_detection_comparison": "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\reports\\fixed_validation_comparison.json",
+    "external_detection_comparison": "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\reports\\external80_comparison.json",
+    "fixed_bioclip_formal": "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\reports\\bioclip2\\固定验证集结果.json",
+    "fixed_end_to_end_formal": "E:\\机器学习课设\\DINOv2鸟类分类对照实验\\reports\\fixed_validation_end_to_end.json",
+    "external_bioclip_formal": "E:\\机器学习课设\\DINOv2鸟类分类对照实验\\reports\\external80_comparison.json"
+  },
+  "runtime": {
+    "python": "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\runtime\\python311-embed\\python.exe",
+    "site_packages": "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\.venv\\Lib\\site-packages"
+  },
+  "notes": [
+    "只有最终检测分数严格大于0.30且通过既有非传递IoU>=0.5检测分数优先去重的候选进入分类。",
+    "分类裁剪扩框15%，灰色114正方形补边，后接BioCLIP 2官方预处理。",
+    "单类检测标签不参与物种分类。目录名只用于外来图事后展示。"
+  ]
+}

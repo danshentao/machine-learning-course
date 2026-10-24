@@ -1,0 +1,12 @@
+from pathlib import Path
+p=Path(r'E:\机器学习课设\第三代鸟类识别现代模型对照\experiments\detector_training_improvements_norm_aligned\reports\C组新增框人工复核\build_review_page.py')
+s=p.read_text(encoding='utf-8-sig')
+s=s.replace("        if p.get('same_class_correct_match',False): continue\n", "        # 与XML位置匹配但类别不同的实例归入第3节，不重复计入25个未匹配框。\n        if p.get('same_class_correct_match',False) or (p.get('matched_truth_iou') is not None and p.get('matched_truth_class') != p.get('class_name')): continue\n")
+s=s.replace("diffs=[]\nfor r in rows:\n", "diffs=[]\npersistent=[]\nfor r in rows:\n")
+s=s.replace("        elif sb['status']!='correct' and sc['status']=='correct': direction='基准有分歧，C组正确匹配'\n        else: continue\n        key=image_data(r)\n        diffs.append({", "        elif sb['status']!='correct' and sc['status']=='correct': direction='基准有分歧，C组正确匹配'\n        elif sb['status']=='class_disagreement' and sc['status']=='class_disagreement': direction='基准与C组均位置匹配但类别有分歧（持续待复核）'\n        else: continue\n        key=image_data(r)\n        target = persistent if direction.startswith('基准与C组均') else diffs\n        target.append({")
+s=s.replace("'images':images,'found':found,'unmatched':unmatched,'diffs':diffs}", "'images':images,'found':found,'unmatched':unmatched,'diffs':diffs,'persistent_disagreements':persistent}")
+s=s.replace("return all.map(x=>({id:x.id,filename:x.filename,section:x.kind,review:", "return all.map(x=>({id:x.id,filename:x.filename,section:x.kind,review:")
+s=s.replace("let all=[...D.found,...D.unmatched,...D.diffs];", "let all=[...D.found,...D.unmatched,...D.diffs,...D.persistent_disagreements];")
+s=s.replace("mount('found',D.found);mount('unmatched',D.unmatched);mount('diff',D.diffs);", "mount('found',D.found);mount('unmatched',D.unmatched);mount('diff',[...D.diffs,...D.persistent_disagreements]);")
+s=s.replace("<div class=\"stat\">类别/检测变化实例：<b>${D.diffs.length}</b></div>", "<div class=\"stat\">实例变化：<b>${D.diffs.length}</b>；持续类别分歧：<b>${D.persistent_disagreements.length}</b></div>")
+p.write_text(s,encoding='utf-8')

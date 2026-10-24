@@ -1,0 +1,26 @@
+{
+  "initialized_from": "E:\\机器学习课设\\第二代结果归档\\20261003_211135\\工程\\runs\\detector\\best_model_ap50.pdparams",
+  "initial_weight_sha256": "dc394290449ddf40fef31c144320acb8b13d0fb57b6d35f39419c3aeadfca539",
+  "fresh_optimizer": "no --resume at epoch 0; new Momentum optimizer and cosine scheduler, avoiding old near-zero LR state",
+  "budget": {
+    "epochs": 40,
+    "phase1": 30,
+    "phase2": 10,
+    "checkpoint_interval": 5,
+    "batch_size": 2,
+    "input_final": 640,
+    "seed": 123,
+    "base_learning_rate": 0.0001,
+    "ema": "inherited from official PP-YOLOE+ s config"
+  },
+  "groups": {
+    "A": "fixed 640 + horizontal flip; 30+10 fixed 640 control",
+    "B": "phase1 mild RandomDistort + box-aware RandomCrop + multi-scale 480..768 step32; phase2 fixed640, no color/crop/scale aug",
+    "C": "same as B plus per-box RandomErasingImage p=.15, target-box area .05-.15; off in final 10 epochs"
+  },
+  "same_train_annotation": "E:\\机器学习课设\\第二代结果归档\\20261003_211135\\工程\\data\\annotations\\instances_train_bird.json",
+  "same_validation_annotation": "E:\\机器学习课设\\第二代结果归档\\20261003_211135\\工程\\data\\annotations\\instances_val_bird.json",
+  "augmentation_source": "PaddleDetection 2.9 operators; A/B/C share the same official model and original Gen2 best checkpoint",
+  "training_normalization": "ImageNet mean/std, scale 1/255, matching archived Gen2 fine-tuning TrainReader; official inherited Eval/Test remains raw pixels, matching the baseline inference reader. A one-epoch diagnostic preserved official val AP50 0.879 from initial 0.876; an input-mismatched raw-pixel fine-tune collapsed and is archived separately.",
+  "note": "The multi-scale interval is a short-run candidate set. The actual subset used by the final config is recorded after preflight memory/target-size review."
+}

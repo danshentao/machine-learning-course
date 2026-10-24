@@ -1,0 +1,13 @@
+{
+  "version": "v2",
+  "review_confirmations": [
+    {"filename": "dashanque_095.jpg", "status": "current_labels_confirmed", "confirmed_by": "用户（本人确认）", "note": "用户明确确认原标注类别为大山雀，保留XML现有类别和框；此确认不解除dashanque_119.jpg的排除。"},
+    {"filename": "dashanque_106.jpg", "status": "current_labels_confirmed", "confirmed_by": "用户（本人确认）", "note": "用户确认原标注正确，保留XML现有类别和框。"},
+    {"filename": "heihouhongtunbei_003.jpg", "status": "current_labels_confirmed", "confirmed_by": "用户（本人确认）", "note": "用户明确确认类别为黑喉红臀鹎，保留XML现有类别和框；此前模型类别分歧不作为改标签依据。"},
+    {"filename": "heihouhongtunbei_004.jpg", "status": "current_labels_confirmed", "confirmed_by": "用户（本人确认）", "note": "用户确认类别为黑喉红臀鹎，并依据可见黑色喉部和红臀确认，保留XML现有类别和框。"},
+    {"filename": "heihouhongtunbei_086.jpg", "status": "current_labels_confirmed", "confirmed_by": "用户（本人确认）", "note": "用户确认原标注正确，保留XML现有类别和框。"},
+    {"filename": "shanmaque_028.jpg", "status": "current_labels_confirmed", "confirmed_by": "用户（本人确认）", "note": "用户确认原标注正确，保留XML现有类别和框；同源图shanmaque_090.jpg仍待复核并继续隔离。"},
+    {"filename": "shumaque_112.jpg", "status": "current_labels_confirmed", "confirmed_by": "用户（本人确认）", "note": "用户确认原标注正确，保留XML现有类别和框。"}
+  ],
+  "changes": []
+}

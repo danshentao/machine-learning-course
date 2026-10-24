@@ -1,0 +1,23 @@
+# 经本机条件选定的 PP-Detection release/2.9 + PaddlePaddle 2.6.2 单卡环境。
+paddlepaddle-gpu==2.6.2
+nvidia-cudnn-cu11==8.9.5.29
+protobuf==3.20.2
+numpy==1.26.4
+Pillow==12.3.0
+opencv-python==4.5.5.64
+PyYAML==6.0.3
+pycocotools==2.0.8
+matplotlib==3.11.2
+visualdl==2.5.3
+typeguard==4.4.4
+shapely==2.0.7
+scipy==1.15.3
+terminaltables==3.1.10
+tqdm==4.70.1
+packaging==25.0
+Cython==3.1.2
+imgaug==0.4.0
+lapx==0.10.0
+motmetrics==1.4.0
+pyclipper==1.4.0
+scikit-learn==1.7.2

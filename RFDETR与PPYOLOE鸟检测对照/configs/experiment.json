@@ -1,0 +1,39 @@
+{
+  "experiment": "RF-DETR Small vs deployed PP-YOLOE+ s, one-class bird detection",
+  "workspace": "E:/机器学习课设/RFDETR与PPYOLOE鸟检测对照",
+  "archive": "E:/机器学习课设/第二代结果归档/20261003_211135/工程",
+  "gen1_prepared_images": "E:/机器学习课设/自然场景鸟类检测PPYOLOE/data/prepared/images",
+  "deployed_detector_weights": "E:/机器学习课设/第二代结果归档/20261003_211135/工程/runs/detector/best_model_ap50.pdparams",
+  "deployed_detector_config": "E:/机器学习课设/第二代鸟类检测与细粒度分类/configs/ppyoloe_plus_bird_640.yml",
+  "fixed_validation_json": "E:/机器学习课设/第二代结果归档/20261003_211135/工程/data/annotations/instances_val_bird.json",
+  "train_json": "E:/机器学习课设/第二代结果归档/20261003_211135/工程/data/annotations/instances_train_bird.json",
+  "external_image_dir": "F:/鸟图/images",
+  "external_report": "E:/机器学习课设/本地鸟类识别网站/用户80图验证_20261008",
+  "external_flags_report": "E:/机器学习课设/DINOv2鸟类分类对照实验/reports/external80_comparison.json",
+  "excluded_train_sources": [
+    "dashanque_119.jpg",
+    "jiamaque_087.jpg",
+    "shanmaque_090.jpg"
+  ],
+  "model": "RFDETRSmall",
+  "classes": [
+    "bird"
+  ],
+  "seed": 123,
+  "resolution": 512,
+  "epochs": 30,
+  "batch_size": 1,
+  "grad_accum_steps": 8,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "checkpoint_interval": 5,
+  "num_workers": 2,
+  "amp_dtype": "fp16",
+  "gradient_checkpointing": true,
+  "display_threshold_strictly_greater": 0.3,
+  "matching_iou": 0.5,
+  "ppyoloe_nms_iou": 0.7,
+  "proposal_limit_for_display": 300,
+  "teacher_test_used": false,
+  "external_images_used_for_training_or_selection": false
+}

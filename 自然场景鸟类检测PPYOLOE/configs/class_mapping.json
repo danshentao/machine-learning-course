@@ -1,0 +1,81 @@
+{
+  "description": "课程确认的八类固定编号；名称规范化不代表逐只物种标签已验证。",
+  "classes": [
+    {
+      "category_id": 0,
+      "folder": "shumaque",
+      "standard_name": "树麻雀",
+      "accepted_xml_labels": [
+        "树麻雀"
+      ]
+    },
+    {
+      "category_id": 1,
+      "folder": "jiamaque",
+      "standard_name": "家麻雀",
+      "accepted_xml_labels": [
+        "家麻雀"
+      ]
+    },
+    {
+      "category_id": 2,
+      "folder": "shanmaque",
+      "standard_name": "山麻雀",
+      "accepted_xml_labels": [
+        "山麻雀"
+      ]
+    },
+    {
+      "category_id": 3,
+      "folder": "baitoubei",
+      "standard_name": "白头鹎",
+      "accepted_xml_labels": [
+        "白头鹎"
+      ]
+    },
+    {
+      "category_id": 4,
+      "folder": "hongerbei",
+      "standard_name": "红耳鹎",
+      "accepted_xml_labels": [
+        "红耳鹎"
+      ]
+    },
+    {
+      "category_id": 5,
+      "folder": "heihouhongtunbei",
+      "standard_name": "黑喉红臀鹎",
+      "accepted_xml_labels": [
+        "黑喉红臀鹎"
+      ]
+    },
+    {
+      "category_id": 6,
+      "folder": "dashanque",
+      "standard_name": "大山雀",
+      "accepted_xml_labels": [
+        "大山雀"
+      ]
+    },
+    {
+      "category_id": 7,
+      "folder": "meishanque",
+      "standard_name": "煤山雀",
+      "accepted_xml_labels": [
+        "煤山雀",
+        "眉山雀"
+      ]
+    }
+  ],
+  "source_label_to_standard": {
+    "树麻雀": "树麻雀",
+    "家麻雀": "家麻雀",
+    "山麻雀": "山麻雀",
+    "白头鹎": "白头鹎",
+    "红耳鹎": "红耳鹎",
+    "黑喉红臀鹎": "黑喉红臀鹎",
+    "大山雀": "大山雀",
+    "煤山雀": "煤山雀",
+    "眉山雀": "煤山雀"
+  }
+}

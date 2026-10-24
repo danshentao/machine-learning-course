@@ -1,0 +1,19 @@
+{
+  "workspace": "E:/机器学习课设",
+  "generation3": "E:/机器学习课设/第三代鸟类识别现代模型对照",
+  "generation2_archive": "E:/机器学习课设/第二代结果归档/20261003_211135",
+  "generation2_archive_engineering": "E:/机器学习课设/第二代结果归档/20261003_211135/工程",
+  "generation2_live_engineering": "E:/机器学习课设/第二代鸟类检测与细粒度分类",
+  "paddledetection": "E:/机器学习课设/自然场景鸟类检测PPYOLOE/third_party/PaddleDetection",
+  "paddle_python": "E:/机器学习课设/自然场景鸟类检测PPYOLOE/.venv/Scripts/python.exe",
+  "prepared_images": "E:/机器学习课设/自然场景鸟类检测PPYOLOE/data/prepared",
+  "training_seconds_stage1_epochs": 30,
+  "training_seconds_total_epochs": 40,
+  "seed": 123,
+  "base_learning_rate": 0.0001,
+  "batch_size": 2,
+  "input_size": 640,
+  "display_threshold": 0.30,
+  "crop_margin": 0.15,
+  "nms_group_iou": 0.5
+}

@@ -1,0 +1,1062 @@
+[
+  {
+    "path": "自然场景鸟类检测PPYOLOE/README.md",
+    "sha256": "a750b2b06d063638ef6613a142b398a46a2acb9584d396993d2bb5f57cc21be8",
+    "bytes": 18416
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/requirements-runtime.txt",
+    "sha256": "ec356004878cce12796285d28bcb99ddbe8618fe8ba1c97d052bbace930e9f07",
+    "bytes": 473
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/audit_annotation_matches.py",
+    "sha256": "0e963cb3a9b54eb9d5021807ad8d00f88fdece08d6516daab12d8b69194b6d90",
+    "bytes": 10096
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/audit_data.py",
+    "sha256": "f3be5a8e2f804906f61e5b515623fed376f81b13df51845ca3e7ea2f0ceb6ea2",
+    "bytes": 23630
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/batch_infer.py",
+    "sha256": "c40c7304b7ebf9a0c773f0c72acaf08cf79a484c15f1b3eac11292636618dd86",
+    "bytes": 6964
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/build_comparison_artifacts.py",
+    "sha256": "921b56f88b5c65d869c88fb39dccc689eed1fa664f0ed5921344781a006b6cac",
+    "bytes": 8754
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/build_unique_birds_gallery.py",
+    "sha256": "cc38c4b3b283e86c40f21593637afffe6259ab99150ea60c431c2e1da96447ae",
+    "bytes": 7170
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/class_agnostic_nms.py",
+    "sha256": "ff092cef8cd192d56e042e2c024306a65e6707e1aa3338cad64556a82c004742",
+    "bytes": 2302
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/detection_display.py",
+    "sha256": "532812f689a0e69e606477cf9510500e8bc755eb7d2deddc062b4e8ea698fd31",
+    "bytes": 1748
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/evaluate_predictions.py",
+    "sha256": "e7ebf20037d6ee9053bf0842316e295f4708bebd2391e640bb6b10d82480817a",
+    "bytes": 12821
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/export_class_confidences.py",
+    "sha256": "20a5e88d5df8438ce026019ac5dae4dc2811353e4a9002ff00f8db4e3827474f",
+    "bytes": 5011
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/input_change_check.py",
+    "sha256": "ec57c6e04a21ff060ccbc80556f502911e37dd74c7fbedcb061eecb38caff947",
+    "bytes": 6511
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/make_review_galleries.py",
+    "sha256": "885116c3141bfa91f096629e1d62f20534db635b6aeb11efc71d4f6fa350847d",
+    "bytes": 5837
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/prepare_data.py",
+    "sha256": "bc8c00a569ec49fe364edeac729731f4e3bb59244683b0ba84a8856fc5dfe34e",
+    "bytes": 14617
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/rank_ap50_checkpoints.py",
+    "sha256": "2f3ae95e6066de48f02970229befbe0dcb269a2f8aa6629b03340c32b77b43ce",
+    "bytes": 2440
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/record_environment.py",
+    "sha256": "20db374c7b16211456be0945e6a83397b87132542fdc8cf19e5e33f9f0808bb1",
+    "bytes": 1840
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/run_prepare.ps1",
+    "sha256": "5c7b477922fe35e5fbe4e17e98c99f8a1d31d626b856b9b8ffca5646afcc8d7e",
+    "bytes": 492
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/run_train.ps1",
+    "sha256": "8fb1743c2dd4e5a824dd933b3c46a3be280f2a5098e9fece8fec0c251bc08e11",
+    "bytes": 1192
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/summarize_input_change.py",
+    "sha256": "d8b3ab7e9d2def2eb4c9356a7f5c7bf55a8528727a3636a27c6e5eeee580b540",
+    "bytes": 4241
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/unique_birds_gallery_template.html",
+    "sha256": "15c44d91f3ed4658776c53cd43d123ce76054ea85593ed9d57df261c44d8b3d1",
+    "bytes": 10122
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/validate_pretrained_checkpoint.py",
+    "sha256": "4b2ffd90f7d6f03778022e553030f4f26613c919df3f0af496f2b92dcd7edf8a",
+    "bytes": 1261
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/scripts/verify_confidence_run.py",
+    "sha256": "d73499e58016b9c143480af079f9e7b7d2b48350aac46258ad7287c2965846ce",
+    "bytes": 2480
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/configs/class_mapping.json",
+    "sha256": "86cd7f4dab9d5d2703a599283877380d8403b4b218a07e74c1d3915de555fc33",
+    "bytes": 1857
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/configs/ppyoloe_s_bird_640.yml",
+    "sha256": "f4597e87fe6aa9b8e4ada39d3fe73acc236a6b68ead7ebafa88ddf765e95871a",
+    "bytes": 2289
+  },
+  {
+    "path": "自然场景鸟类检测PPYOLOE/configs/ppyoloe_s_bird_smoke.yml",
+    "sha256": "ce64a7b7ff1ef1eab67efeda108ad4a54418440a22e3d4e77e81594974921d2a",
+    "bytes": 257
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/README.md",
+    "sha256": "167ea64269a89a5c2b95090de07dca54bc0d509271ac18984520745941d452c1",
+    "bytes": 5718
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/build_class_disagreement_gallery.py",
+    "sha256": "7f676eafd1b5c6a36a64c5bbc62ecbf2a23b7037ea4e220a352d0c64b1165a75",
+    "bytes": 4151
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/build_comparison_gallery.py",
+    "sha256": "f6a3defadcfd0826262fbe0a0972cd4bcd37cd6485bf310ae771facf9fe610f1",
+    "bytes": 9020
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/build_deduplicated_gallery.py",
+    "sha256": "2c7c08fee6843d1d59e9da134b7888cc2369d998d26fd7b4ca37e98c1542f234",
+    "bytes": 4532
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/build_eight_review_gallery.py",
+    "sha256": "5df596956f6126ccf3aeb0e31f709502fcd974da7af4060075df020d1762cf84",
+    "bytes": 5552
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/build_no_display_diagnostics.py",
+    "sha256": "862b0e66d353be242e38cc5fe1213a117e44504c973eb71f451735fc0ca8cd6e",
+    "bytes": 4490
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/build_same_rule_generation_comparison.py",
+    "sha256": "b64c6a40ad0d8299b16dc7c6acd209e9a71026247f70f706770573320772d4ee",
+    "bytes": 5526
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/build_visual_review_report.py",
+    "sha256": "2d12c9978497c7b5b1cfa271a8757cc346368ce083d2d40940feccfdf7603004",
+    "bytes": 2495
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/classification_crop_diagnostic_template.html",
+    "sha256": "898f662746d4eda645c53a5fd15da913a4ba0677a4b43dc61dec244adf75931a",
+    "bytes": 6786
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/classifier_checkpoint_template.html",
+    "sha256": "059ce0d59bc3b7682a08093711e847ecddff5a86d76b1672fd764d96b0d2b658",
+    "bytes": 8146
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/class_disagreement_template.html",
+    "sha256": "db3ebaf7c4bdf86dd789a4d570497f4445271a7b9884669142f7b09179e2f29a",
+    "bytes": 6282
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/compare_classifier_checkpoints.py",
+    "sha256": "d45a659dbf1f979c176742aab5a774530675677c57b9bcd37e6e7e21436db594",
+    "bytes": 7762
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/compare_display_thresholds.py",
+    "sha256": "086ec24ff23449424fd33fdf477845a7877a2dacef683fe871fc68fe8cd07c67",
+    "bytes": 6536
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/deduplicated_gallery_template.html",
+    "sha256": "a9c5d51a6fe62b2ef6d7b8aeac0d44f4c57496a91f11e6e1e0eeb402edda79a5",
+    "bytes": 6747
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/diagnose_classification_crops.py",
+    "sha256": "60da8bc7740c9b0f7c67aecb3d625452a22db7126a6cf91d951c6c2658517e8a",
+    "bytes": 7306
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/download_weights.py",
+    "sha256": "76644159e741eee1907fa8f2209b5e4ea820f44e50cb0e317fd2175b4a9998ec",
+    "bytes": 1120
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/eight_review_template.html",
+    "sha256": "46efcb762efdd8ef8b0f076ce1dd89f980b77ddfb84a0de73f3075f4a1cf91e5",
+    "bytes": 9120
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/evaluate_classifier_crops.py",
+    "sha256": "9ab857b10fae34c50490c8271ecc85fb3fe0edf3eed4ebca6ba417cda215ec19",
+    "bytes": 2447
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/evaluate_two_stage.py",
+    "sha256": "0459aa5eb5a2116cff23647014f5b8f449a5458a7a30e86386aa512d28111afb",
+    "bytes": 6580
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/eval_detector.ps1",
+    "sha256": "c1742d8f0b60d774826f2127de63bf70bf49a068a51608e02c9a57beffb1f83b",
+    "bytes": 1523
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/eval_detector_snapshots.ps1",
+    "sha256": "d4172f64907bf2f97f8eeebb70e839d4d6dac9622838b5c6be24def10c52c138",
+    "bytes": 2553
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/infer_two_stage.py",
+    "sha256": "670ad824b36fc8846115b4879a108d22c7f88419a46d6032f98d95bae9365489",
+    "bytes": 10597
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/no_display_diagnostics_template.html",
+    "sha256": "cad78be0a7e7268dd0aa38dc55a140c1760d0baa51ab34dcb87395c724e9db42",
+    "bytes": 7175
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/prepare_data.ps1",
+    "sha256": "1b98482fc8cad39c3b86847dc9b60b2a3e90990f9e1711ee97aa097e1aedeb37",
+    "bytes": 378
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/prepare_data.py",
+    "sha256": "6aefc9ce86dc70bc0dd6e1067e782ed5d9631fa5a44be13edf2cb92605e36764",
+    "bytes": 20887
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/prepare_smoke_annotations.py",
+    "sha256": "208e928c1b63327c111614ab672d1e6deba5686b14edd571c0dece04e665641c",
+    "bytes": 1077
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/run_fixed_validation_comparison.ps1",
+    "sha256": "00a85c65d0da16fbd4d1c251a4303f81d92ff07b935d6620a541d3d3a598316b",
+    "bytes": 2277
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/run_smoke.ps1",
+    "sha256": "eac52fdd181519417d1cb4a589c7c39033320bdfa3238f8093c149f96d709bc2",
+    "bytes": 1987
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/same_rule_comparison_template.html",
+    "sha256": "676541dea9ad7a498667349b6da4ee119e11428469afaf26bd8cc5b25daa35a6",
+    "bytes": 7041
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/set_runtime_env.ps1",
+    "sha256": "5f81a72533151c09d9f324bcc1d9d0cdb7dcbdb4a1ce1088a0b8c53561005053",
+    "bytes": 503
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/threshold_comparison_template.html",
+    "sha256": "048a5936f4fdb8f75e6494fea0e9365e6cb840f07b71761fc22fda1fa19a1b5c",
+    "bytes": 8141
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/train_classifier.py",
+    "sha256": "25fc503286af421996756728b3f8ce06cf09111d230c2c47559e3015c60c9bb2",
+    "bytes": 8164
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/train_detector.ps1",
+    "sha256": "6b804653bfcbba8a4606648c2043bae7a1ad19c95bb8709a128d5b739078cfbe",
+    "bytes": 1500
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/verify_user_confirmation_split.py",
+    "sha256": "d0412c782fde8cc1b01d966bcac368c76d2fd48b0438741a8134fa412c5ac8a9",
+    "bytes": 3933
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/visual_review_notes.json",
+    "sha256": "09189ac9f009889d5b994edd159e46c5788654f006329135663e9c301c511a3b",
+    "bytes": 7196
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/visual_review_template.html",
+    "sha256": "e1235ce0ce60ca09e1c823ab1ed8ed30eb968b161fbdb1cb54dbfd12b97ae793",
+    "bytes": 5395
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/scripts/write_experiment_status.py",
+    "sha256": "ab85a69068c41dfc15fd3e66a02821bb7e8715e750fbb16c2b16e512f2a916a0",
+    "bytes": 17866
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/configs/class_mapping.json",
+    "sha256": "5688bbda793f414f3fb8d5cfc68e82eaae2decbfc88096f54f5ba87d6635d939",
+    "bytes": 908
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/configs/paths.json",
+    "sha256": "525049bdfab00629661ebf6b3fecc2fad01b178924c83b62d105eb2495382330",
+    "bytes": 853
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/configs/ppyoloe_plus_bird_640.yml",
+    "sha256": "109ae554e4dd9b2d9e314801e5716d2cc116464257facf63f32d3584c69f5250",
+    "bytes": 2171
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/configs/ppyoloe_plus_bird_smoke.yml",
+    "sha256": "548a4b8bed2ae315a29d1c1b9450206b65ea3b3c00e7af8fba2d4f3fd6a9ba5e",
+    "bytes": 625
+  },
+  {
+    "path": "第二代鸟类检测与细粒度分类/data/annotation_corrections_v2.json",
+    "sha256": "f5aedd29e157012b0383d9463579ed79db49ef9d4e728eac5b0c371148afe5e6",
+    "bytes": 1683
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/README.md",
+    "sha256": "429ca13af0a521d9334ac48570d1856a419539bbd8d13364bf0f0cb91151d758",
+    "bytes": 3255
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/archive_generation2.py",
+    "sha256": "06acd45fc9186d1efb19952fc57d8444bc24cb1d1c486e61c4151b24ae804f6d",
+    "bytes": 3970
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/build_gallery.py",
+    "sha256": "c4618808ef1c76d3e4c2713053296784d7130dc7c132297a4837a8ce888c56e9",
+    "bytes": 2708
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/check_gallery.mjs",
+    "sha256": "8587c84c0c0621aa8cf785c4b5e3d5bcabf049a3a7d1562565fba331c8fceec5",
+    "bytes": 1571
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/check_resolution_gallery.mjs",
+    "sha256": "d1b3dc845ae3cd16caf1a6ae984db7033682bba96a178da8fffb41ec5f0fd191",
+    "bytes": 1568
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/common.py",
+    "sha256": "3732f39af8cfccddf4c37ae9d983af473df75f088b362f877726654c9866df58",
+    "bytes": 4524
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/compare_detector_resolution.py",
+    "sha256": "7db89774a3665d2d12624b991a745fab80cd201a5d9bf0ea62e14971555098eb",
+    "bytes": 9024
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/detector_resolution.py",
+    "sha256": "63122f40fcf0403c41b62949d7db219ba5615c665acbdf57c26f6e870e6ed11e",
+    "bytes": 4171
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/fet_classifier.py",
+    "sha256": "2f29a74a7e70c6ada3678bb988b91fa798e7a4d3285f5638fe4e546e6d7a6aa4",
+    "bytes": 6624
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/finalize_training.py",
+    "sha256": "8891326a1c25f6998d22a62146e674b7d3bd08beeea74f2a3e193fd9090fc164",
+    "bytes": 2924
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/frozen_encoder.py",
+    "sha256": "3d15819b3bd70096c21cb8057460574e2446031e58b23ef2ddb221a85ba7bf4c",
+    "bytes": 6359
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/gallery.html",
+    "sha256": "8d4d59e6e99b186f10651e0db650750ab409006ed61a6437674e6ef4ed42e453",
+    "bytes": 5055
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/scripts/review_completed_experiments.py",
+    "sha256": "0d6a7eed500b0248cdd3426bf5d30b1f0746662f7648aa69cc94d5dd15a79ea4",
+    "bytes": 7802
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/paths.json",
+    "sha256": "ba2553fbd9c7b7d2dfcaf00189294203d2f39006b14ab3373b8b5478795b0cd6",
+    "bytes": 960
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/README.md",
+    "sha256": "be39ab083908bdc273fa83ec06c98ef48bed6bb1da61cd88cace0be383de8310",
+    "bytes": 5405
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/start_training.ps1",
+    "sha256": "68c00b05e16e6a3f40ca1abeaab835fb0294db11b07b4c7711d559fca03bf0dc",
+    "bytes": 1731
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/A_phase1.yml",
+    "sha256": "a858bae22005056ebb8e536b8562e98c9d11e04d3dc6c19930bf915a0ead0da8",
+    "bytes": 2258
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/A_phase2.yml",
+    "sha256": "4298d7a5b84e0312cede14dbd76ec4f5329ffbf8b6901f3287b52218beb7c6dc",
+    "bytes": 2258
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/B_phase1.yml",
+    "sha256": "4ad1e3b321af736ac515a12d99931405395fd921780466e023fe7d2db53bb692",
+    "bytes": 3115
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/B_phase2.yml",
+    "sha256": "5c8672748c0262bc0ce27d3f42fde1db108c98b05ee55ebf04e053e05507c5ba",
+    "bytes": 2258
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/C_phase1.yml",
+    "sha256": "b0afe3d49149d131e4bfbe0e9d849880656d2ec46526e1ea8143f2c984e2130f",
+    "bytes": 3222
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/C_phase2.yml",
+    "sha256": "bd1f5f07498b5f81a0d8690607ab93e3445419923a2a736919756929ce041e63",
+    "bytes": 2258
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/smoke_A.yml",
+    "sha256": "6ffe829fb8d6d117f9ac0c62a7df4ba051716fca644c3e1cea64867f6ad6068a",
+    "bytes": 2277
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/smoke_B.yml",
+    "sha256": "939a68d66bf3921ea256df7ad4cf32a6082078c0977f5bfe44e2f4e2eebb4270",
+    "bytes": 3134
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/smoke_C.yml",
+    "sha256": "6dbcf90a1d63ffd79caf1988a4ebf915a08ca1b7512a4d950c1f6249e9aa1dda",
+    "bytes": 3241
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/training_design.json",
+    "sha256": "5716cbd8e5fbc2586f67b3b3ab3f3b793251f48f6c28e3fd04c4147a008e509e",
+    "bytes": 1556
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/configs/diagnostics/train_imagenet_norm_1epoch.yml",
+    "sha256": "c7e0e23be66281be4cf16f455593799f7983ba8fbd2f8c420da0b7482d60b0fa",
+    "bytes": 2296
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/build_configs.py",
+    "sha256": "3f5ec0340f240b5ef1d0974483afa1caafd5b51c8b490929a0eaffad3417449d",
+    "bytes": 5700
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/build_smoke_configs.py",
+    "sha256": "4229782bbf819f833db70cd12056c1253d7bb7d1681f596a5a703fd3aa7b60e9",
+    "bytes": 1853
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/compare_end_to_end.py",
+    "sha256": "96f99e8e098613ed3d2962f3782d5729a8f8aa1a1a4f68ec4bcd7784ce037f7a",
+    "bytes": 17767
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/diagnose_train_preprocessing.py",
+    "sha256": "0687f3dff1768be3431f91a9794bccd2b98a770bf1f62dc281fad66d8ba1cc4a",
+    "bytes": 2838
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/evaluate_checkpoints.py",
+    "sha256": "b500642bbbd9865c3e8c6b52726d9faa4151a395f030453052c62bbd28c687a5",
+    "bytes": 4565
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/finalize_after_training.py",
+    "sha256": "2145b9c99d928ea77ed944bc729efd39a2525ac1b52435f7b60662f280816bcc",
+    "bytes": 6374
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/generate_hard_training_review.py",
+    "sha256": "a8a1e0b8971e7b3abd2ba49362f53c61f6bd19cfcd4347622065c61e807df1bd",
+    "bytes": 8741
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/predict_val_candidates.py",
+    "sha256": "0f75f0c9b4169d5e8fb7ccf3223683b8a25cd5303c7d6f7ebf55ad26342bbbeb",
+    "bytes": 3688
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/preflight_audit.py",
+    "sha256": "6a0415ea62b263c81f2a8657e9ddb9879896729b7b2ed5f303df5a0562e9099f",
+    "bytes": 7474
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/preview_erasing.py",
+    "sha256": "b50d9771e8a0516ae78c1d49060da0871e91224a131c61c18086467768cf48d7",
+    "bytes": 4685
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/record_environment.py",
+    "sha256": "35f1e8c2e9bce929ac4880329124d50a2f818ced9675348ee79773357800b215",
+    "bytes": 1801
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/run_formal_training.py",
+    "sha256": "4d769e1ecc14d74695e953becbfd55cc437e398683d49563fbb9deae28e89dfe",
+    "bytes": 4571
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/train_seeded_official.py",
+    "sha256": "9efe3ed7a01a844bf61604a10f42377afa04df297ca83cd5115084f267d6cf90",
+    "bytes": 1076
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/scripts/watch_training_recovery.py",
+    "sha256": "e3a51c0c832bbd7dfee20fa8179a5dd41c39bc86105f24f2fcc1cfded7e1054b",
+    "bytes": 2512
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements/templates/hard_review_template.html",
+    "sha256": "1656f4f2e49c89583eaf57e8f79e01d0f77c2d8684ab3474233fe3aff4c5fc30",
+    "bytes": 4920
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/paths.json",
+    "sha256": "ba2553fbd9c7b7d2dfcaf00189294203d2f39006b14ab3373b8b5478795b0cd6",
+    "bytes": 960
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/README.md",
+    "sha256": "f266defb0ce4f51589d332e4d28823e49c063561b72b3767709217a8e85859d4",
+    "bytes": 6307
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/resume_training.ps1",
+    "sha256": "a6ae3e35dfb1701aba9554333f767619de03f18528ef965ac2f6d8545dcb112c",
+    "bytes": 1833
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/start_training.ps1",
+    "sha256": "3912f4645c0f5063cf6daddfa71832df9dee9fb95d1e952099a6122cd22437e2",
+    "bytes": 1821
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/A_phase1.yml",
+    "sha256": "2aa8abd169936f3bc2b58ad9513a3a2522243d88d91ff0e0461bf38f23e12ed8",
+    "bytes": 2286
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/A_phase2.yml",
+    "sha256": "0abebfbb5e11a687e56a3ec60436a9d678546843ce7f70ed8955e9aefb73cb96",
+    "bytes": 2286
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/B_phase1.yml",
+    "sha256": "fa4b6d14047727b4123ec548c44936005c58d09945bc45c16678dfe0c71ee2f3",
+    "bytes": 3143
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/B_phase2.yml",
+    "sha256": "b1a9219bdebc229826447b3583de44173916045305f5626525cc8a2bc0e05801",
+    "bytes": 2286
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/C_phase1.yml",
+    "sha256": "7804be9fee27ce4cddb2e1e58653af6bc93ce527b3e020a47a60d7c2d60fc54b",
+    "bytes": 3250
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/C_phase2.yml",
+    "sha256": "44de1eae12557df56e87f08bde2945162255b6cd1097988141c3ee48b4858684",
+    "bytes": 2286
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/smoke_A.yml",
+    "sha256": "842abed7c6f4af5443e605156d493cb21787e42b24db5d56e4f68c832150ca48",
+    "bytes": 2318
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/smoke_B.yml",
+    "sha256": "bedcc211f98e003d4d87bca8d6c89db5a45d01afc2ec240717984697439cd43c",
+    "bytes": 3175
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/smoke_C.yml",
+    "sha256": "aa417dc5c375bd4671d1e3fcf0cedd7d1408b90f74cbd3c36466a540cd7926dd",
+    "bytes": 3282
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/training_design.json",
+    "sha256": "2d03380f135a2ffe4d1d788d1d84c80bc8eb1c3458b3fe0ac0ef9301deb27ff9",
+    "bytes": 1912
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/configs/diagnostics/train_imagenet_norm_1epoch.yml",
+    "sha256": "c7e0e23be66281be4cf16f455593799f7983ba8fbd2f8c420da0b7482d60b0fa",
+    "bytes": 2296
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/C组包含去重09采纳核查/build_containment_review.py",
+    "sha256": "e7e8b6c68bb13c0e99229a6307d417969e7b82b39094608f76c2e5dce648284f",
+    "bytes": 30399
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/C组包含去重09采纳核查/page_runtime_check.js",
+    "sha256": "959f2a12bfc08c06b59e20776b628ebe2436df58d41981912e78ab7b0b2e17a9",
+    "bytes": 10089
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/C组包含去重09采纳核查/runtime_mock_test.js",
+    "sha256": "8eb2b168b1c797280333b3fc26b68f4e6c993949550247f97bbde68e036b636f",
+    "bytes": 3549
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/C组新增框人工复核/build_review_page.py",
+    "sha256": "df65267904acc1314c02512d5dc54b6a0e9d46f7773266ee835ec457d5a4d5a6",
+    "bytes": 23101
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/C组新增框人工复核/page_runtime_check.js",
+    "sha256": "e3a9b7f2a484feff946fbf8edf24950df89e0e98d180b98b46e64998ccc019fd",
+    "bytes": 10051
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/C组新增框人工复核/patch_filter.py",
+    "sha256": "1c724d3a1720a2b3eb35342b933930fe3d110f7534b35d1730b481c587fc05ea",
+    "bytes": 813
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/C组新增框人工复核/patch_review.py",
+    "sha256": "dcb9bbd918b61a23bdff56697f205cdbaa8a4a94a5d34ac146dbabfa8d00c4c4",
+    "bytes": 2294
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/包含去重回退记录/build_revert_preview.py",
+    "sha256": "dee82e29038aab399a3e00cdba7f704819f1ad1ea78c7dae442b89e09f5102d9",
+    "bytes": 13811
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/包含去重回退记录/render_coordinate_check.py",
+    "sha256": "e14ea2cdcd022dde57bb8efb403ea7319d0440af14202541302470c287db74fa",
+    "bytes": 2543
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/同鸟重复框后处理对照/build_manual_issue_review.py",
+    "sha256": "9274ab115929ab482f7967b02679aa662776efb24b4090743f999a78fbf06374",
+    "bytes": 11767
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/同鸟重复框后处理对照/compare_postprocess_rules.py",
+    "sha256": "be260179ee1bcd2819364ec4d0247f24d6c16dd2201126b2566187340d8e71fb",
+    "bytes": 35805
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/同鸟重复框后处理对照/page_runtime_check.js",
+    "sha256": "f5a6888068c34ab86fc370b55ec2b0b0ce7571359c64e9c6dae9515774b9605e",
+    "bytes": 8050
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/同鸟重复框后处理对照/patch_compare.py",
+    "sha256": "3356e967e19ebbc83b28c8747ca2d802fd15342c81b613e2ca5cbc453a63354e",
+    "bytes": 6781
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/同鸟重复框后处理对照/patch_payload.py",
+    "sha256": "084b3bd16733fb071f3412a087a0299b336d6f3d7060a5c13635cec46ba2bf7b",
+    "bytes": 947
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/reports/同鸟重复框后处理对照/runtime_main.js",
+    "sha256": "f5a6888068c34ab86fc370b55ec2b0b0ce7571359c64e9c6dae9515774b9605e",
+    "bytes": 8050
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/build_configs.py",
+    "sha256": "ddd0138517f78a15600bff06d2c99cdadcb7ba79a6ba76130714583b9c41e6a1",
+    "bytes": 6169
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/build_smoke_configs.py",
+    "sha256": "4229782bbf819f833db70cd12056c1253d7bb7d1681f596a5a703fd3aa7b60e9",
+    "bytes": 1853
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/compare_end_to_end.py",
+    "sha256": "96f99e8e098613ed3d2962f3782d5729a8f8aa1a1a4f68ec4bcd7784ce037f7a",
+    "bytes": 17767
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/diagnose_train_preprocessing.py",
+    "sha256": "0687f3dff1768be3431f91a9794bccd2b98a770bf1f62dc281fad66d8ba1cc4a",
+    "bytes": 2838
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/evaluate_checkpoints.py",
+    "sha256": "b500642bbbd9865c3e8c6b52726d9faa4151a395f030453052c62bbd28c687a5",
+    "bytes": 4565
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/finalize_after_training.py",
+    "sha256": "2145b9c99d928ea77ed944bc729efd39a2525ac1b52435f7b60662f280816bcc",
+    "bytes": 6374
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/generate_hard_training_review.py",
+    "sha256": "a8a1e0b8971e7b3abd2ba49362f53c61f6bd19cfcd4347622065c61e807df1bd",
+    "bytes": 8741
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/mark_training_paused.py",
+    "sha256": "11ddf17cdd30073542bf647e1fd6efca7b65d7b41d7ba864c3816e1881223e22",
+    "bytes": 1503
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/predict_val_candidates.py",
+    "sha256": "0f75f0c9b4169d5e8fb7ccf3223683b8a25cd5303c7d6f7ebf55ad26342bbbeb",
+    "bytes": 3688
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/preflight_audit.py",
+    "sha256": "7dd9c52194ffb35985a5193a038e179be4c38239a6e483ac1f13faa92a5b340e",
+    "bytes": 7537
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/preview_erasing.py",
+    "sha256": "b50d9771e8a0516ae78c1d49060da0871e91224a131c61c18086467768cf48d7",
+    "bytes": 4685
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/record_environment.py",
+    "sha256": "35f1e8c2e9bce929ac4880329124d50a2f818ced9675348ee79773357800b215",
+    "bytes": 1801
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/run_formal_training.py",
+    "sha256": "4d769e1ecc14d74695e953becbfd55cc437e398683d49563fbb9deae28e89dfe",
+    "bytes": 4571
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/train_seeded_official.py",
+    "sha256": "9efe3ed7a01a844bf61604a10f42377afa04df297ca83cd5115084f267d6cf90",
+    "bytes": 1076
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/scripts/watch_training_recovery.py",
+    "sha256": "8a22f62d25198432d9698b4099b71f6406ab5fcf66df11b57bf104e7b76cc6ca",
+    "bytes": 2417
+  },
+  {
+    "path": "第三代鸟类识别现代模型对照/experiments/detector_training_improvements_norm_aligned/templates/hard_review_template.html",
+    "sha256": "1656f4f2e49c89583eaf57e8f79e01d0f77c2d8684ab3474233fe3aff4c5fc30",
+    "bytes": 4920
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/README.md",
+    "sha256": "308f32ecb28ae5def20f4819b265769273b8bca91fbea37525ec0563630b6ad9",
+    "bytes": 5253
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/browser_qa.py",
+    "sha256": "b76f26843975abace5cd1d174f17e16f6365c2c9112c1a0c77e8dd15612f90bf",
+    "bytes": 5527
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/evaluate_and_build_reports.py",
+    "sha256": "1901cfb499dd417ae4125dc682848cb3415fb642d62f5055f4edcc0858ed23d6",
+    "bytes": 46852
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/finalize_results.ps1",
+    "sha256": "5edf32581da5d007b5b09bcfaaf37b976397e725192f8628263503feff795712",
+    "bytes": 2537
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/infer_ppyoloe.py",
+    "sha256": "7ff55e954a3c259bdd5acd46646e8011275bb46938577c083ab3a078f4b5206a",
+    "bytes": 8983
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/infer_rfdetr.py",
+    "sha256": "9ed852b062077b2ce30b0f447db3a2051da8b6ef836d1800007727bfa6433c39",
+    "bytes": 5596
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/prepare_data.py",
+    "sha256": "101d18611037700307f46a6e8e301b9eb527828d751c84a6a675525b8295e591",
+    "bytes": 5338
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/prepare_smoke_data.py",
+    "sha256": "68af42ae978814697bd314526fd774eaa2b91231f7beaf342a51f5725bfaaf8d",
+    "bytes": 1132
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/run_formal.ps1",
+    "sha256": "f029acddfdd86a57ce11f7d06b299227be1a0f5d5f4a5d3d44f89126c16bcf47",
+    "bytes": 652
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/train_rfdetr.py",
+    "sha256": "7336816e5b7ec4794336bddfeead14c18d19189d699d2a67046d31044fbf75e2",
+    "bytes": 4585
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/scripts/write_provenance.py",
+    "sha256": "5c7202828f84ed8d9e1a125ec0df061c15b37030885a7c36d8a01a2be55eb6b8",
+    "bytes": 7681
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/configs/experiment.json",
+    "sha256": "2ddd9468f5d97f5c3d1d16fba40fd38599718d4fc9a6747d9aec78e377e414b5",
+    "bytes": 1819
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/browser_qa.py",
+    "sha256": "7890c070edfcf5ab1b2dd892e7d23c6f26bb96e9842d385dad0f7e1ab2c51100",
+    "bytes": 4799
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/build_gallery.py",
+    "sha256": "e6757e950797ff2f455cbe88677ead5585c250651baffa8d8179cb1646eec41b",
+    "bytes": 11723
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/compare_firstbox.py",
+    "sha256": "5eb110379dc1ade249736c825bafd92186b430fd062ae72844982c0e333f6110",
+    "bytes": 601
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/compute_species_map.py",
+    "sha256": "6b905ebffd040aba93691f6b7b306821473e88fb7c74a4a73ef86e4aef9ae1f7",
+    "bytes": 12447
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/final_audit.py",
+    "sha256": "30e1ae55badc2bf1543c21d95393f59b19aae3b07d0673a794fca712b3d7fa8f",
+    "bytes": 1090
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/inspect_disagreements.py",
+    "sha256": "2f4131a8eef9858512ea57e5b9ccda497ef0b0cd445ea6cbf786792b84a9710f",
+    "bytes": 277
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/inspect_dom.py",
+    "sha256": "76d26ad60d42a08c2e547416e275164d41536c6f181e1fb88d25a932aabec69e",
+    "bytes": 373
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/inspect_historic.py",
+    "sha256": "bf3bca186d0b4576bb3df0dcb045d16a058b262dfcfb0b0d6945e1e823e7fc25",
+    "bytes": 634
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/inspect_inputs.py",
+    "sha256": "5e53782ad27bd5a14ff30937fe7485f44404a827464acff3f31d92962a733ea4",
+    "bytes": 591
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/inspect_page.py",
+    "sha256": "89a5e681e5882ee1dd15eca838d40070c492adf5a417d62ae20fb129a138b23e",
+    "bytes": 296
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/inspect_tail.py",
+    "sha256": "8902a28074ea36a785b91bed0c0c19f1a787727a97af47108c4e3a3c98ce0a30",
+    "bytes": 217
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/inspect_truth.py",
+    "sha256": "978acb245b0d09d4968b1b7983c4a383bbb4066230bd11ffcb329f4ed9caeadc",
+    "bytes": 435
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/probe_bioclip_replay.py",
+    "sha256": "43d713b2e8078a366b4026a085d7480601d0d769cca606388beb5b79bbca5b16",
+    "bytes": 2138
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/run_end_to_end.py",
+    "sha256": "d33a76e1fc3fe7e1066a16ac0fe5485e1af8fb849b1f1461874e5e39973f7983",
+    "bytes": 35493
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/summarize_result.py",
+    "sha256": "facb885931a913304fd8e774e5262bf6e80240256966a86f8876374657f2b3f0",
+    "bytes": 2034
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/scripts/verify_image_identity.py",
+    "sha256": "9093de878c63bd64707b366861fbcaa98fb4b3e708243cbb4c4da1ab07725059",
+    "bytes": 1517
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/configs/experiment.json",
+    "sha256": "fec55f2545fed5c17826ff4c3f9c544d5cf60a3df06e6d0afc3d19e589e92a7f",
+    "bytes": 2325
+  },
+  {
+    "path": "RFDETR与PPYOLOE鸟检测对照/端到端BioCLIP2对照/README.md",
+    "sha256": "7fa54be0efba4d8e8a6b4d6cde74dcbf657dff7656a1f49c001e49f83996552e",
+    "bytes": 2244
+  },
+  {
+    "path": "本地鸟类识别网站/browser_check.js",
+    "sha256": "9f8cde8ba4361ccb9e90b76ff27d0e273b9cb33cf7caa2afbc8c4b9e9e9576df",
+    "bytes": 6720
+  },
+  {
+    "path": "本地鸟类识别网站/README.md",
+    "sha256": "f97f673946f538ce1f8b1f8eb968bde1d69963162ac398004450c17b5513c088",
+    "bytes": 4456
+  },
+  {
+    "path": "本地鸟类识别网站/server.py",
+    "sha256": "64df77f62b969501997a070490fb911b770109f66cc00eefcc66c617e51944d4",
+    "bytes": 16044
+  },
+  {
+    "path": "本地鸟类识别网站/settings.py",
+    "sha256": "26504b692386e93b5fb132a5a9529eba76103d5c8bc5b26f7d9e45cb384825ac",
+    "bytes": 2231
+  },
+  {
+    "path": "本地鸟类识别网站/verify_results.py",
+    "sha256": "5b7419a8dc794033d340a6f5f8f433f2123d241c7d8ed2bdf923e986c0633d26",
+    "bytes": 3055
+  },
+  {
+    "path": "本地鸟类识别网站/worker.py",
+    "sha256": "b0939909728fa457342ea4d6179898c6b88f0ff3011a163de0e10f4291518ae2",
+    "bytes": 11645
+  },
+  {
+    "path": "本地鸟类识别网站/停止网站.cmd",
+    "sha256": "c15a93b24a14db3b02f0ff031fddbb5b083bfdedac344963c662b34fde107aac",
+    "bytes": 111
+  },
+  {
+    "path": "本地鸟类识别网站/停止网站.ps1",
+    "sha256": "0c63ad46bdaa4b7f3670a619a63e9b341be38fff7838f11999d9419053b34d68",
+    "bytes": 1552
+  },
+  {
+    "path": "本地鸟类识别网站/启动网站.cmd",
+    "sha256": "f487b186363c1cda76596534646fb8c7052f8407d68558ea9247e4f8dca9b411",
+    "bytes": 111
+  },
+  {
+    "path": "本地鸟类识别网站/启动网站.ps1",
+    "sha256": "3a4fcf7b40684d2d70c029b3adc6ad80c2df87850b3ac261bba17ba1e91606e4",
+    "bytes": 1136
+  },
+  {
+    "path": "本地鸟类识别网站/模型接入清单.json",
+    "sha256": "2ad4a2b5f2670f8e03013118d190912e75271a1894c1f0aca2805389372c3413",
+    "bytes": 420
+  },
+  {
+    "path": "本地鸟类识别网站/浏览器验收.json",
+    "sha256": "3fbf8315e6c9e411e28dc0c30973dc9fcc22ed16f09026c142bdeb497d10438c",
+    "bytes": 413
+  },
+  {
+    "path": "本地鸟类识别网站/真实模型验收.json",
+    "sha256": "198e459666b28ee8fed302b373ac51fd2497d8475586f3aede38531c3b8fca3c",
+    "bytes": 1265
+  },
+  {
+    "path": "本地鸟类识别网站/验收任务.json",
+    "sha256": "643b492a3074f1c8cb7f8e497fe49222b9623c7dc79e45c022c012dd19b88d1a",
+    "bytes": 240
+  },
+  {
+    "path": "本地鸟类识别网站/验收任务_有鸟.json",
+    "sha256": "12a98d88bd289dba6328b02049da1ae2001676914f57be19c926aac132107f42",
+    "bytes": 240
+  },
+  {
+    "path": "本地鸟类识别网站/static/app.js",
+    "sha256": "e60d1827b89e31c6c6a6cab941fb07565c5c7901dfbb8ff0c6ccc38af4be4997",
+    "bytes": 11768
+  },
+  {
+    "path": "本地鸟类识别网站/static/index.html",
+    "sha256": "0cc8cf6feb7d2587f6dbc4b0c3786bdf520358fa12762be34480310e6b4796ca",
+    "bytes": 7449
+  },
+  {
+    "path": "本地鸟类识别网站/static/style.css",
+    "sha256": "d020f5d6b1e8b5e82d5ee26e0663a71062f4844d45a2d235913a168a31a63d38",
+    "bytes": 8960
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/README.md",
+    "sha256": "3756284973e27f51a62fd318d0ed1e68782b86ee00cd4199c960a052d02b3d35",
+    "bytes": 4244
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/scripts/check_pages.mjs",
+    "sha256": "303888887a948ae44219cba471dac9a6f02cd718949352cfec762797527aa5fa",
+    "bytes": 2795
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/scripts/debug_bio_cache.py",
+    "sha256": "f8b09826f766005f611ed635d9be3936b6fafcfb829fa7a692564f3a7df14cee",
+    "bytes": 2934
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/scripts/evaluate_and_gallery.py",
+    "sha256": "4f9dbe8b04e74c7cce2d49e51b7660a69b17b0004fff837470f6d48cb91db676",
+    "bytes": 37804
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/scripts/extract_train_features.py",
+    "sha256": "684dc893e89d072099746a8dae4457dcb1b746fa7b15897779135786232e637f",
+    "bytes": 4303
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/scripts/prepare_data.py",
+    "sha256": "15b6c8088a9f7ed58339b1edc371d8e5b4d67fd353129c6c9e3797ecdbfeb756",
+    "bytes": 5219
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/scripts/smoke_dinov2.py",
+    "sha256": "7a5949894490fd0d01a565c91c64e2e1ad63abeca62fa37f5d20e30a25804ce1",
+    "bytes": 2035
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/scripts/train_linear_head.py",
+    "sha256": "f6139b4bcf41fcb10b03d8413ae1a1a89cf67a046a377c239324011457421786",
+    "bytes": 4809
+  },
+  {
+    "path": "DINOv2鸟类分类对照实验/configs/experiment.json",
+    "sha256": "3ca3ec1905608629ac9dd88aad9e8e6e6a3e7105636b1d5b7ffbf1010a5249fc",
+    "bytes": 1658
+  }
+]

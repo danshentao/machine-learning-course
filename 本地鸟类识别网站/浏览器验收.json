@@ -1,0 +1,15 @@
+{
+  "browser": "Microsoft Edge headless, actual CDP interaction",
+  "port": 8765,
+  "fileSelectionEnablesRecognition": true,
+  "recognitionButtonCompletesRealInference": true,
+  "cnnCompareSwitchWorks": true,
+  "compareTab": true,
+  "metricCards": 4,
+  "historyCount": 7,
+  "displayRows": 1,
+  "boxToggleChangesCanvas": true,
+  "zoomDialogWorks": true,
+  "mobileHorizontalOverflow": false,
+  "consoleErrors": []
+}

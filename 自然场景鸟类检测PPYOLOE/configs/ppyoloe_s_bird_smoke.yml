@@ -1,0 +1,12 @@
+_BASE_: ['./ppyoloe_s_bird_640.yml']
+epoch: 2
+snapshot_epoch: 1
+weights: runs/smoke_640/model_final
+LearningRate:
+  base_lr: 0.000625
+  schedulers:
+    - name: CosineDecay
+      max_epochs: 2
+    - name: LinearWarmup
+      start_factor: 0.0
+      epochs: 1

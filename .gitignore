@@ -1,0 +1,33 @@
+# Models and datasets stay outside Git
+.venv/
+venv/
+__pycache__/
+node_modules/
+.cache/
+cache/
+runtime/
+weights/
+runs/
+output/
+outputs/
+*.pdparams
+*.pdopt
+*.pdstates
+*.pth
+*.pt
+*.safetensors
+*.onnx
+*.zip
+*.sqlite*
+*.db
+*.log
+.env
+.env.*
+!.env.example
+# Never vendor upstream source checkouts
+**/third_party/
+# Local image/crop/cache datasets
+**/data/prepared/
+**/data/dataset/
+**/data/jobs/
+**/data/crops/
