@@ -1,0 +1,24 @@
+{
+  "dataset": "Same frozen 172 validation images, 204 instances, 8 species; decoded pixels checked across sources",
+  "AP": "pycocotools COCOeval; 101 recall points; IoU 0.50 for mAP50 and 0.50:0.05:0.95 for mAP; maxDets=[1,10,100] per category",
+  "native_candidate_floor": 0.001,
+  "native_candidate_cap": 300,
+  "additional_dedup": "All generations use original score-priority non-transitive class-agnostic IoU>=0.5 suppression, before classifier",
+  "AP_display_filter": false,
+  "one_species_per_box": "top-1 only, matching deployed pipeline",
+  "ranking_score": {
+    "gen1": "native joint localization/species score; no separate classifier",
+    "gen2_gen3_gen4": "detector_score * classifier_top_score, as fourth-generation primary result"
+  },
+  "crop": "Existing per-model preprocessing, 15% box expansion for all stage-two classifiers; CNN uses original integer truncation; BioCLIP floor/ceil",
+  "operating_point": "native detector score strictly >0.30, IoU>=0.5 matching",
+  "image_exact_accuracy": "All annotated birds correctly located and classified, no extra predicted boxes, divided by 172; assessed against frozen XML",
+  "matched_box_classification_accuracy": "Correct species among geometry-matched bird boxes / number of geometry-matched boxes; includes all 8 species and all 172 images, excludes unmatched boxes from denominator",
+  "limitations": [
+    "Reused validation set, not an independent test.",
+    "Annotation omissions can make correct detections disagree with XML.",
+    "Historical weights and training manifests differ across generations; metric standardization does not equal identical training budget.",
+    "Native model scores are not equally calibrated; threshold 0.30 is a shared operating point, not an equivalent probability.",
+    "Historical native outputs are retained; first and PP use 640, RF uses 512."
+  ]
+}

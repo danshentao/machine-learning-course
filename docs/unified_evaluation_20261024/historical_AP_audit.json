@@ -1,0 +1,21 @@
+{
+  "gen1_original_official_NMS_only": {
+    "mAP50": 0.8614555945188391,
+    "mAP50_95": 0.6257885302251531,
+    "predictions": 51600
+  },
+  "gen1_clip_to_image_official_NMS_only": {
+    "mAP50": 0.8614555945188391,
+    "mAP50_95": 0.6262184012872545,
+    "predictions": 51600
+  },
+  "gen1_unified_clip_and_extra_iou_dedup": {
+    "mAP50": 0.7830171612075958,
+    "mAP50_95": 0.5609515833400152,
+    "low_score_candidates": 11757
+  },
+  "first_generation_native_AP_matches_historical": true,
+  "fourth_generation_weights_match_historical_classification_cache": true,
+  "final_evaluation_script_sha256": "96f6f9c6366d32d28b2091b9a17900aeadf1f3cd04ae286d75f69d5c0887e4f5",
+  "explanation": "The old 86.15% used native class-wise official NMS outputs. Common extra class-agnostic score-priority IoU>=0.5 dedup, as used by the fourth-generation pipeline, changes which boxes are retained. Bounding clipping is also applied uniformly. All versions are reported without picking a rule based on labels."
+}

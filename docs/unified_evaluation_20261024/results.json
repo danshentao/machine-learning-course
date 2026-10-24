@@ -1,0 +1,448 @@
+{
+  "rules": {
+    "dataset": "Same frozen 172 validation images, 204 instances, 8 species; decoded pixels checked across sources",
+    "AP": "pycocotools COCOeval; 101 recall points; IoU 0.50 for mAP50 and 0.50:0.05:0.95 for mAP; maxDets=[1,10,100] per category",
+    "native_candidate_floor": 0.001,
+    "native_candidate_cap": 300,
+    "additional_dedup": "All generations use original score-priority non-transitive class-agnostic IoU>=0.5 suppression, before classifier",
+    "AP_display_filter": false,
+    "one_species_per_box": "top-1 only, matching deployed pipeline",
+    "ranking_score": {
+      "gen1": "native joint localization/species score; no separate classifier",
+      "gen2_gen3_gen4": "detector_score * classifier_top_score, as fourth-generation primary result"
+    },
+    "crop": "Existing per-model preprocessing, 15% box expansion for all stage-two classifiers; CNN uses original integer truncation; BioCLIP floor/ceil",
+    "operating_point": "native detector score strictly >0.30, IoU>=0.5 matching",
+    "image_exact_accuracy": "All annotated birds correctly located and classified, no extra predicted boxes, divided by 172; assessed against frozen XML",
+    "matched_box_classification_accuracy": "Correct species among geometry-matched bird boxes / number of geometry-matched boxes; includes all 8 species and all 172 images, excludes unmatched boxes from denominator",
+    "limitations": [
+      "Reused validation set, not an independent test.",
+      "Annotation omissions can make correct detections disagree with XML.",
+      "Historical weights and training manifests differ across generations; metric standardization does not equal identical training budget.",
+      "Native model scores are not equally calibrated; threshold 0.30 is a shared operating point, not an equivalent probability.",
+      "Historical native outputs are retained; first and PP use 640, RF uses 512."
+    ]
+  },
+  "provenance": {
+    "sources": {
+      "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\reports\\fixed_validation_comparison.json": "d585af2401ee5f215514cdb290dce5eb118a870bf2d767f9e4fc62e8d7b7779f",
+      "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\reports\\bioclip2\\固定验证集结果.json": "d878d8e26e9d34ab31db9d3175a560a419ec585b262f4006b9b88d14101088a6",
+      "E:\\机器学习课设\\自然场景鸟类检测PPYOLOE\\runs\\baseline_640\\ap50_epoch_13_predictions\\predictions.json": "aa94b710e1b7c932298e1ff66dde0eef82f63b94ca730ccb6a7938ac59655a34",
+      "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\端到端BioCLIP2对照\\reports\\八类端到端mAP_20261014\\完整低分候选八类得分.json": "ab61ab1e0caf9f94c031eccddfcfc6c49fe3ba45c92fe71a36feff66f941d14c"
+    },
+    "weights": {
+      "E:\\机器学习课设\\第一代结果归档\\模型与训练\\best_model_ap50.pdparams": "701ca5b989f8227dbad0c80825885a0e9f14583b5b0f96c04f0042501ca59fbf",
+      "E:\\机器学习课设\\第二代结果归档\\20261003_211135\\工程\\runs\\detector\\best_model_ap50.pdparams": "dc394290449ddf40fef31c144320acb8b13d0fb57b6d35f39419c3aeadfca539",
+      "E:\\机器学习课设\\第二代结果归档\\20261003_211135\\工程\\runs\\classifier_resnet_v2\\best_model.pdparams": "8a6b4fb1f820c27f6094c30d01ccda0ef05ddb74362b916afea3bb226e7ee386",
+      "E:\\机器学习课设\\第二代结果归档\\20261003_211135\\工程\\runs\\classifier_bilinear_v2\\best_model.pdparams": "2f40aacc83052a9160eb2ec127b3745bc2956e96b00f67f565f18f00305938c5",
+      "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\runs\\bioclip2\\best_head.pt": "7d199f954bf7a125fe50d1f11f632268bbfa2d0c7b1bfa1bcbdf8a681b4b4ece",
+      "E:\\机器学习课设\\RFDETR与PPYOLOE鸟检测对照\\weights\\rfdetr_small_bird_best.pth": "b2acea3b6cfccc011b9b0bd1237114e1f881c5e7fbed306870fd695a58d3ed16",
+      "E:\\机器学习课设\\第三代鸟类识别现代模型对照\\weights\\bioclip2\\open_clip_model.safetensors": "b7b2bf6fbc95799e42630e394cf95803892ab447c1a8ab629dbc82fbeaf7dfef"
+    },
+    "script_sha256": "d0383eac478fe3b66ca90ae856044468d23f1a972c9d2f310a0e7a2ee3fbe5f1",
+    "website_worker_sha256": "b0939909728fa457342ea4d6179898c6b88f0ff3011a163de0e10f4291518ae2"
+  },
+  "results": {
+    "gen1": {
+      "TP": 154,
+      "FP": 45,
+      "FN": 50,
+      "exact_correct_images": 135,
+      "no_box_images": 0,
+      "geometry_matched_boxes": 181,
+      "geometry_matched_class_correct": 154,
+      "class_disagreement_images": 25,
+      "model": "第一代 PP-YOLOE-s",
+      "mAP50": 0.7830171612075958,
+      "mAP50_95": 0.5609515833400152,
+      "AP75": 0.617206449935297,
+      "low_score_candidates": 11757,
+      "Precision": 0.7738693467336684,
+      "Recall": 0.7549019607843137,
+      "F1": 0.7642679900744417,
+      "image_exact_accuracy": 0.7848837209302325,
+      "matched_box_classification_accuracy": 0.850828729281768,
+      "images": 172,
+      "GT": 204,
+      "per_class": [
+        {
+          "model": "gen1",
+          "class_name": "树麻雀",
+          "GT": 44,
+          "AP50": 0.47248828389626296,
+          "AP50_95": 0.31250180617609274
+        },
+        {
+          "model": "gen1",
+          "class_name": "家麻雀",
+          "GT": 27,
+          "AP50": 0.6612231552976825,
+          "AP50_95": 0.43055312584682476
+        },
+        {
+          "model": "gen1",
+          "class_name": "山麻雀",
+          "GT": 20,
+          "AP50": 0.6881188118811881,
+          "AP50_95": 0.45887211798102895
+        },
+        {
+          "model": "gen1",
+          "class_name": "白头鹎",
+          "GT": 22,
+          "AP50": 0.9464446444644464,
+          "AP50_95": 0.6746021550192487
+        },
+        {
+          "model": "gen1",
+          "class_name": "红耳鹎",
+          "GT": 25,
+          "AP50": 0.8397839783978397,
+          "AP50_95": 0.6107476461931907
+        },
+        {
+          "model": "gen1",
+          "class_name": "黑喉红臀鹎",
+          "GT": 20,
+          "AP50": 0.900990099009901,
+          "AP50_95": 0.7380680375729881
+        },
+        {
+          "model": "gen1",
+          "class_name": "大山雀",
+          "GT": 24,
+          "AP50": 0.867449552837057,
+          "AP50_95": 0.5727230061458768
+        },
+        {
+          "model": "gen1",
+          "class_name": "煤山雀",
+          "GT": 22,
+          "AP50": 0.8876387638763876,
+          "AP50_95": 0.6895447717848708
+        }
+      ]
+    },
+    "gen2_resnet18": {
+      "TP": 156,
+      "FP": 21,
+      "FN": 48,
+      "exact_correct_images": 140,
+      "no_box_images": 5,
+      "geometry_matched_boxes": 169,
+      "geometry_matched_class_correct": 156,
+      "class_disagreement_images": 13,
+      "model": "第二代 PP-YOLOE+ + ResNet18",
+      "mAP50": 0.7954864450533852,
+      "mAP50_95": 0.5438707876451575,
+      "AP75": 0.5799244278385229,
+      "low_score_candidates": 29432,
+      "Precision": 0.8813559322033898,
+      "Recall": 0.7647058823529411,
+      "F1": 0.8188976377952756,
+      "image_exact_accuracy": 0.813953488372093,
+      "matched_box_classification_accuracy": 0.9230769230769231,
+      "images": 172,
+      "GT": 204,
+      "per_class": [
+        {
+          "model": "gen2_resnet18",
+          "class_name": "树麻雀",
+          "GT": 44,
+          "AP50": 0.6489590531035733,
+          "AP50_95": 0.40846326234311797
+        },
+        {
+          "model": "gen2_resnet18",
+          "class_name": "家麻雀",
+          "GT": 27,
+          "AP50": 0.6778808759927348,
+          "AP50_95": 0.447792574013625
+        },
+        {
+          "model": "gen2_resnet18",
+          "class_name": "山麻雀",
+          "GT": 20,
+          "AP50": 0.6039603960396039,
+          "AP50_95": 0.3265676567656766
+        },
+        {
+          "model": "gen2_resnet18",
+          "class_name": "白头鹎",
+          "GT": 22,
+          "AP50": 0.8715239945047136,
+          "AP50_95": 0.5746493424220794
+        },
+        {
+          "model": "gen2_resnet18",
+          "class_name": "红耳鹎",
+          "GT": 25,
+          "AP50": 0.8760223848471804,
+          "AP50_95": 0.6295786459979769
+        },
+        {
+          "model": "gen2_resnet18",
+          "class_name": "黑喉红臀鹎",
+          "GT": 20,
+          "AP50": 0.9273769482211379,
+          "AP50_95": 0.7274974076355003
+        },
+        {
+          "model": "gen2_resnet18",
+          "class_name": "大山雀",
+          "GT": 24,
+          "AP50": 0.8653810328768068,
+          "AP50_95": 0.6266274783323468
+        },
+        {
+          "model": "gen2_resnet18",
+          "class_name": "煤山雀",
+          "GT": 22,
+          "AP50": 0.8927868748413302,
+          "AP50_95": 0.6097899336509367
+        }
+      ]
+    },
+    "gen2_bilinear": {
+      "TP": 159,
+      "FP": 18,
+      "FN": 45,
+      "exact_correct_images": 142,
+      "no_box_images": 5,
+      "geometry_matched_boxes": 169,
+      "geometry_matched_class_correct": 159,
+      "class_disagreement_images": 10,
+      "model": "第二代 PP-YOLOE+ + Bilinear CNN",
+      "mAP50": 0.8432337563412134,
+      "mAP50_95": 0.5811411064405992,
+      "AP75": 0.6217874656618277,
+      "low_score_candidates": 29432,
+      "Precision": 0.8983050847457628,
+      "Recall": 0.7794117647058824,
+      "F1": 0.8346456692913385,
+      "image_exact_accuracy": 0.8255813953488372,
+      "matched_box_classification_accuracy": 0.9408284023668639,
+      "images": 172,
+      "GT": 204,
+      "per_class": [
+        {
+          "model": "gen2_bilinear",
+          "class_name": "树麻雀",
+          "GT": 44,
+          "AP50": 0.5790603542636992,
+          "AP50_95": 0.37021438309752114
+        },
+        {
+          "model": "gen2_bilinear",
+          "class_name": "家麻雀",
+          "GT": 27,
+          "AP50": 0.7968229249994785,
+          "AP50_95": 0.5227506765590277
+        },
+        {
+          "model": "gen2_bilinear",
+          "class_name": "山麻雀",
+          "GT": 20,
+          "AP50": 0.8983845752996351,
+          "AP50_95": 0.5737210600759325
+        },
+        {
+          "model": "gen2_bilinear",
+          "class_name": "白头鹎",
+          "GT": 22,
+          "AP50": 0.8819485396815543,
+          "AP50_95": 0.576323227387157
+        },
+        {
+          "model": "gen2_bilinear",
+          "class_name": "红耳鹎",
+          "GT": 25,
+          "AP50": 0.9158415841584159,
+          "AP50_95": 0.6677943676720612
+        },
+        {
+          "model": "gen2_bilinear",
+          "class_name": "黑喉红臀鹎",
+          "GT": 20,
+          "AP50": 0.8663366336633664,
+          "AP50_95": 0.6727349990638162
+        },
+        {
+          "model": "gen2_bilinear",
+          "class_name": "大山雀",
+          "GT": 24,
+          "AP50": 0.8693566267823694,
+          "AP50_95": 0.6344122341646417
+        },
+        {
+          "model": "gen2_bilinear",
+          "class_name": "煤山雀",
+          "GT": 22,
+          "AP50": 0.9381188118811881,
+          "AP50_95": 0.6311779035046362
+        }
+      ]
+    },
+    "gen3": {
+      "TP": 167,
+      "FP": 10,
+      "FN": 37,
+      "exact_correct_images": 150,
+      "no_box_images": 5,
+      "geometry_matched_boxes": 169,
+      "geometry_matched_class_correct": 167,
+      "class_disagreement_images": 2,
+      "model": "第三代 PP-YOLOE+ + BioCLIP 2",
+      "mAP50": 0.9099510303102486,
+      "mAP50_95": 0.6085796281856757,
+      "AP75": 0.6465846718775744,
+      "low_score_candidates": 29432,
+      "Precision": 0.943502824858757,
+      "Recall": 0.8186274509803921,
+      "F1": 0.8766404199475065,
+      "image_exact_accuracy": 0.872093023255814,
+      "matched_box_classification_accuracy": 0.9881656804733728,
+      "images": 172,
+      "GT": 204,
+      "per_class": [
+        {
+          "model": "gen3",
+          "class_name": "树麻雀",
+          "GT": 44,
+          "AP50": 0.6715812615379161,
+          "AP50_95": 0.41454346344252785
+        },
+        {
+          "model": "gen3",
+          "class_name": "家麻雀",
+          "GT": 27,
+          "AP50": 0.9094557571269901,
+          "AP50_95": 0.5955470052755617
+        },
+        {
+          "model": "gen3",
+          "class_name": "山麻雀",
+          "GT": 20,
+          "AP50": 0.9405940594059405,
+          "AP50_95": 0.574587084937528
+        },
+        {
+          "model": "gen3",
+          "class_name": "白头鹎",
+          "GT": 22,
+          "AP50": 0.98957395739574,
+          "AP50_95": 0.6226602098235033
+        },
+        {
+          "model": "gen3",
+          "class_name": "红耳鹎",
+          "GT": 25,
+          "AP50": 0.9158415841584159,
+          "AP50_95": 0.653074488767558
+        },
+        {
+          "model": "gen3",
+          "class_name": "黑喉红臀鹎",
+          "GT": 20,
+          "AP50": 1.0,
+          "AP50_95": 0.7632757393386398
+        },
+        {
+          "model": "gen3",
+          "class_name": "大山雀",
+          "GT": 24,
+          "AP50": 0.9157231114196362,
+          "AP50_95": 0.6332266994366295
+        },
+        {
+          "model": "gen3",
+          "class_name": "煤山雀",
+          "GT": 22,
+          "AP50": 0.9368385114373506,
+          "AP50_95": 0.6117223344634577
+        }
+      ]
+    },
+    "gen4": {
+      "TP": 191,
+      "FP": 5,
+      "FN": 13,
+      "exact_correct_images": 164,
+      "no_box_images": 0,
+      "geometry_matched_boxes": 192,
+      "geometry_matched_class_correct": 191,
+      "class_disagreement_images": 1,
+      "model": "第四代 RF-DETR Small + BioCLIP 2",
+      "mAP50": 0.9819395055269073,
+      "mAP50_95": 0.7436071476128002,
+      "AP75": 0.8502811108438343,
+      "low_score_candidates": 19114,
+      "Precision": 0.9744897959183674,
+      "Recall": 0.9362745098039216,
+      "F1": 0.955,
+      "image_exact_accuracy": 0.9534883720930233,
+      "matched_box_classification_accuracy": 0.9947916666666666,
+      "images": 172,
+      "GT": 204,
+      "per_class": [
+        {
+          "model": "gen4",
+          "class_name": "树麻雀",
+          "GT": 44,
+          "AP50": 0.9695660206414727,
+          "AP50_95": 0.6040406748551304
+        },
+        {
+          "model": "gen4",
+          "class_name": "家麻雀",
+          "GT": 27,
+          "AP50": 0.9849599245638853,
+          "AP50_95": 0.7147754675861251
+        },
+        {
+          "model": "gen4",
+          "class_name": "山麻雀",
+          "GT": 20,
+          "AP50": 0.9405940594059405,
+          "AP50_95": 0.6854444279014368
+        },
+        {
+          "model": "gen4",
+          "class_name": "白头鹎",
+          "GT": 22,
+          "AP50": 1.0,
+          "AP50_95": 0.8095540394375572
+        },
+        {
+          "model": "gen4",
+          "class_name": "红耳鹎",
+          "GT": 25,
+          "AP50": 0.9603960396039604,
+          "AP50_95": 0.7257447387047803
+        },
+        {
+          "model": "gen4",
+          "class_name": "黑喉红臀鹎",
+          "GT": 20,
+          "AP50": 1.0,
+          "AP50_95": 0.8760629004076879
+        },
+        {
+          "model": "gen4",
+          "class_name": "大山雀",
+          "GT": 24,
+          "AP50": 1.0,
+          "AP50_95": 0.7353777520609205
+        },
+        {
+          "model": "gen4",
+          "class_name": "煤山雀",
+          "GT": 22,
+          "AP50": 1.0,
+          "AP50_95": 0.797857179948764
+        }
+      ]
+    }
+  },
+  "fourth_generation_historical_AP_reproduced": true
+}
